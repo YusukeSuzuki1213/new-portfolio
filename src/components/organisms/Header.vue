@@ -4,9 +4,14 @@
       <h1>Yusuke's portfolio</h1>
     </div>
     <div class="header__contents">
-      <v-btn :to="content.to" v-for="(content, index) in contents" :key="index" text>
-        <span class="mr-2">{{ content.text }}</span>
-      </v-btn>
+      <nav class="nav">
+        <g-link
+          class="nav__link"
+          v-for="(content, index) in contents"
+          :key="index"
+          :to="content.to"
+        >{{ content.text }}</g-link>
+      </nav>
     </div>
   </v-app-bar>
 </template>
@@ -46,6 +51,13 @@ export default {
   }
   &__contents {
     margin-left: auto;
+  }
+}
+
+.nav {
+  &__link {
+    margin-left: 20px;
+    color: white;
   }
 }
 </style>
