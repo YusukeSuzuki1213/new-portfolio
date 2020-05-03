@@ -2,8 +2,11 @@
   <section class="hhh">
     <h1 class="text-center font-weight-bold mb-3">Posts</h1>
     <div class="works-list">
-      <ArticleList :articles="posts" isClickable="true"/>
+      <ArticleList :articles="postss" :isClickable="true" />
     </div>
+    <g-link v-for="post in postss" :key="post.id" :to="post.node.path">
+      <h2>{{ post.title }}</h2>
+    </g-link>
   </section>
 </template>
 
@@ -12,11 +15,17 @@ export default {
   components: {
     ArticleList: () => import("~/components/molecules/ArticleList.vue")
   },
+  props: {
+    postss: {
+      type: Array,
+      default: () => ([])
+    }
+  },
   data: () => ({
     posts: [
       {
-        title: "今考えること",
-        subtitle: "サブタイトルいらねぇな",
+        title: "【1分間で名作】夏目漱石『こころ』",
+        subtitle: "罪の意識に苛まれ続けた男の末路とは…",
         src: require("../../assets/images/posts/post-1.jpg"),
         date: "20XX.2.2",
         summary:
