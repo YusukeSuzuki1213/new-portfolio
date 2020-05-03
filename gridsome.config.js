@@ -8,12 +8,12 @@ var path = require("path");
 module.exports = {
   siteName: 'Portfolio',
   plugins: [],
-  outputDir: "dist",
-  css: {
+  outputDir: "dist"
+  /* css: {
     loaderOptions: {
       scss: {
         prependData: '@import "./src/assets/scss/main.scss";'
       }
     }
-  }
+  } */
 }

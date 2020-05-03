@@ -1,6 +1,9 @@
 <template>
-  <div class="layout">
-    <header class="header">
+  <div>
+    <v-app>
+      <v-content>
+        <Header />
+        <!-- <header class="header">
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
@@ -8,10 +11,22 @@
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
-    </header>
-    <slot/>
+        </header>-->
+
+        <slot />
+      </v-content>
+    </v-app>
   </div>
 </template>
+
+<script>
+export default {
+  components: {
+    Header: () => import("~/components/organisms/Header.vue")
+  }
+};
+</script>
+
 
 <static-query>
 query {
@@ -35,7 +50,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+/* 
 .header {
   display: flex;
   justify-content: space-between;
@@ -46,5 +61,5 @@ body {
 
 .nav__link {
   margin-left: 20px;
-}
+}  */
 </style>
