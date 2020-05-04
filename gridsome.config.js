@@ -6,16 +6,25 @@
 
 module.exports = {
   siteName: 'Portfolio',
-  
+
   plugins: [
     {
       use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Post', // 必須。GraphQL上で扱う型定義
+        typeName: 'Post', // 必須。GrahQL上で扱う型定義
         baseDir: './contents/posts', // 記事となるmarkdownファイルを置くディレクトリ
         pathPrefix: '/posts', // URLになるパス。必須ではない。
-        template: './src/templates/Post.vue' // 記事ページのVueコンポーネントファイルの指定
-      },
+        template: './src/templates/BlogPost.vue' // 記事ページのVueコンポーネントファイルの指定
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Work',
+        baseDir: './contents/works',
+        pathPrefix: '/works',
+        template: './src/templates/WorkPost.vue'
+      }
     }
   ],
   outputDir: "dist",

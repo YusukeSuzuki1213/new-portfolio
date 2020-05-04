@@ -1,16 +1,14 @@
 <template>
   <article>
-    <h1>{{ $page.post.title }}</h1>
+    <h1>{{ $page.work.title }}</h1>
     <VueRemarkContent />
   </article>
 </template>
 
 <page-query>
-query Post ($id: ID!) {
-  post(id: $id) {
+query WorkPost ($id: ID!) {
+  work(id: $id) {
     title
-    subtitle
-    path
   }
 }
 </page-query>

@@ -1,10 +1,41 @@
 <template>
   <Layout>
     <div class="works">
-      <Works />
+      <Works :workPosts="$page.works.edges"/>
     </div>
   </Layout>
 </template>
+
+<page-query>
+query WorkPost {
+    works: allWork {
+      edges {
+        node {
+          id
+          path
+          content
+          title
+          subtitle
+          summary
+          src
+          date
+          links {
+            name
+            icon {
+              useFontAwesome
+              prefix
+              name
+            }
+            size
+            url
+          }
+          categories
+          tags
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 export default {

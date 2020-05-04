@@ -1,30 +1,26 @@
 <template>
   <div>
-    <g-link
+    <article
       v-for="(article, index) in articles"
       :key="index"
-      class="link"
-      :to="article.node.path"
-      :class="{ hover: isClickable }"
+      class="article-wrap"
+      :class="{ 'hover': isClickable }"
+      @click="postClicked(article.node.path, isClickable)"
     >
-      <article class="article-wrap">
-        <figure class="article-img">
-          <g-image :src="article.node.src" width="500" />
-        </figure>
-        <div class="article-content">
-          <div class="article-text-block-main">
-            <h2 class="article-title">{{ article.node.title }}</h2>
-            <p class="article-date">{{ article.node.date }}</p>
-            <p
-              class="article-summary"
-            >{{ article.node.content }} {{ article.node.content }} {{ article.node.content }} {{ article.node.content }} {{ article.node.content }}</p>
-          </div>
-          <div class="article-text-block-bottom">
-            <IconList :contents="article.node.links" :button-size="buttonSize" />
-          </div>
+      <figure class="article-img">
+        <g-image :src="article.node.src" width="500" />
+      </figure>
+      <div class="article-content">
+        <div class="article-text-block-main">
+          <h2 class="article-title" :class="{ 'article-title--blue': isClickable }">{{ article.node.title }}</h2>
+          <p class="article-date">{{ article.node.date }}</p>
+          <p class="article-summary">{{ article.node.summary }}</p>
         </div>
-      </article>
-    </g-link>
+        <div class="article-text-block-bottom">
+          <IconList :contents="article.node.links" :buttonSize="buttonSize" :iconSize="iconSize" />
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 
@@ -41,6 +37,10 @@ export default {
     isClickable: {
       type: Boolean,
       default: false
+    },
+    iconSize: {
+      type: String,
+      default: "lg"
     }
   },
   data: () => ({
@@ -50,24 +50,14 @@ export default {
     }
   }),
   methods: {
-    articleClicked(link) {
-      if (this.isClickable) {
-        window.location.href = link;
-      }
+    postClicked(path, isClickable) {
+      if (isClickable) this.$router.push({ path: path });
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-.link {
-  display: block;
-  text-decoration: none;
-  color: black;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 .hover {
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -81,7 +71,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 50px 15px;
-  max-width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   .article-img {
     width: 55%;
@@ -104,8 +94,10 @@ export default {
     .article-text-block-main {
       width: 100%;
       .article-title {
-        @include sp() {
-          color: #0066cb;
+        &--blue {
+          @include sp() {
+            color: #0066cb;
+          }
         }
       }
       .article-date {
@@ -123,6 +115,7 @@ export default {
       }
     }
     .article-text-block-bottom {
+      pointer-events: auto;
     }
   }
 }

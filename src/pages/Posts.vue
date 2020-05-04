@@ -1,13 +1,14 @@
 <template>
   <Layout>
     <div class="posts">
-      <Posts :postss="$page.posts.edges"/>
+      <Posts :posts="$page.posts.edges"/>
+      <H1>{{ $page.posts.edges[0].node.path }}</H1>
     </div>
   </Layout>
 </template>
 
 <page-query>
-query Post {
+query BlogPost {
     posts: allPost {
       edges {
         node {
@@ -16,6 +17,7 @@ query Post {
           content
           title
           subtitle
+          summary
           src
           date
           categories

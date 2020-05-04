@@ -1,7 +1,7 @@
 <template>
   <section class="pa-5">
     <h2 class="text-center font-weight-bold mb-3">Contacts</h2>
-    <IconList :contents="contents" :button-size="buttonSize"/>
+    <IconList :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize"/>
   </section>
 </template>
 
@@ -66,7 +66,8 @@ export default {
     buttonSize: {
       height: "80",
       width: "80"
-    }
+    },
+    iconSize: "3x"
   })
 };
 </script>

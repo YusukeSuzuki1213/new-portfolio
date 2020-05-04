@@ -8,7 +8,7 @@
         :height="buttonSize.height"
         :width="buttonSize.width"
       >
-        <font-awesome v-if="content.icon.useFontAwesome" :icon="[content.icon.prefix, content.icon.name]" size="3x"/>
+        <font-awesome v-if="content.icon.useFontAwesome" :icon="[content.icon.prefix, content.icon.name]" :size="iconSize"/>
         <v-icon v-else :size="content.size">{{ content.icon.name }}</v-icon>
       </v-btn>
     </div>
@@ -28,6 +28,10 @@ export default {
         height: "80",
         width: "80"
       })
+    },
+    iconSize: {
+      type: String,
+      default: "lg"
     }
   }
 };
