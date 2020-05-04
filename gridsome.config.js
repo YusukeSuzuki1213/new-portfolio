@@ -25,6 +25,12 @@ module.exports = {
         pathPrefix: '/works',
         template: './src/templates/WorkPost.vue'
       }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms',
+      options: {
+        publicPath: '/admin'
+      }
     }
   ],
   outputDir: "dist",
