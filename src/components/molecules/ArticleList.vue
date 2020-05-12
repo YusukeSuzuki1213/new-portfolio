@@ -4,7 +4,7 @@
       v-for="(article, index) in articles"
       :key="index"
       class="article-wrap"
-      :class="{ 'hover': isClickable }"
+      :class="{ 'hover': isClickable }" 
       @click="postClicked(article.node.path, isClickable)"
     >
       <figure class="article-img">
@@ -12,14 +12,17 @@
       </figure>
       <div class="article-content">
         <div class="article-text-block-main">
-          <h2 class="article-title" :class="{ 'article-title--blue': isClickable }">{{ article.node.title }}</h2>
+          <h2
+            class="article-title"
+            :class="{ 'article-title--blue': isClickable }"
+          >{{ article.node.title }}</h2>
           <p class="article-date">{{ article.node.date }}</p>
           <p class="article-summary">{{ article.node.summary }}</p>
         </div>
         <div class="article-text-block-bottom">
           <IconList :contents="article.node.links" :buttonSize="buttonSize" :iconSize="iconSize" />
         </div>
-      </div>
+      </div>      
     </article>
   </div>
 </template>
@@ -73,6 +76,17 @@ export default {
   padding: 50px 15px;
   max-width: 1000px;
   margin: 0 auto;
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+    overflow: hidden;
+    text-indent: -9999px;
+    z-index: 0;
+  }
   .article-img {
     width: 55%;
     @include sp() {

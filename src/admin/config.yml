@@ -2,13 +2,13 @@ backend:
   name: github
   repo: YusukeSuzuki1213/new-portfolio
 
-media_folder: "static/contents"
-public_folder: "/contents"
+media_folder: "static/content"
+public_folder: "/content"
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "contents/posts/"
+    folder: "content/posts/"
     create: true
     slug: "{{slug}}"
     fields:
@@ -21,7 +21,7 @@ collections:
       - {label: "内容", name: "body", widget: "markdown"}
   - name: "works"
     label: "Works"
-    folder: "contents/works/"
+    folder: "content/works/"
     create: true
     slug: "{{slug}}"
     fields:

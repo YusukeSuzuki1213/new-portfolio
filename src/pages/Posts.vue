@@ -2,14 +2,13 @@
   <Layout>
     <div class="posts">
       <Posts :posts="$page.posts.edges"/>
-      <H1>{{ $page.posts.edges[0].node.path }}</H1>
     </div>
   </Layout>
 </template>
 
 <page-query>
 query BlogPost {
-    posts: allPost {
+    posts: allBlogPost {
       edges {
         node {
           id

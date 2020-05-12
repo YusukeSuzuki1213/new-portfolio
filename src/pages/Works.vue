@@ -8,7 +8,7 @@
 
 <page-query>
 query WorkPost {
-    works: allWork {
+    works: allWorkPost {
       edges {
         node {
           id
