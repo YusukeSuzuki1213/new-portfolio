@@ -2,7 +2,7 @@
   <section class="hhh">
     <h1 class="text-center font-weight-bold mb-3">Works</h1>
     <div class="works-list">
-      <ArticleList :articles="workPosts" :isClicable="isClicable" :iconSize="iconSize"/>
+      <ArticleList :articles="workPosts" :isClicable="isClicable" :iconSize="iconSize"/>     
     </div>
   </section>
 </template>

@@ -1,31 +1,22 @@
 <template>
-  <article>
-    <article class="single-article">
-      <div class="single-article__header">
-        <figure class="single-article__image" :style="getBackground($page.blogPost.src)">
-          <g-image :src="$page.blogPost.src"/>
-        </figure>
-      </div>
-    </article>
-    <h1>{{ $page.blogPost.title }}</h1>
-    <div class="post__content" v-html="$page.blogPost.content" />
-  </article>
+  <Layout>
+    <div>
+      <header class="header">
+        <g-image class="header__img" :src="$page.blogPost.src" />
+      </header>
+      <main class="main">
+        <div class="post">
+          <div class="post__header"></div>
+          <div class="post__content" v-html="$page.blogPost.content"></div>
+          <div class="post__footer"></div>
+        </div>
+      </main>
+    </div>
+  </Layout>
 </template>
 
 <script>
-export default {
-  methods: {
-    getBackground(src) {
-      return 
-      `
-      background-image: url('${ src }');
-      background-size: contain;
-      width:100%;
-      height:400px; 
-      `
-    }
-  }
-}
+export default {};
 </script>
 
 <page-query>
@@ -41,24 +32,43 @@ query BlogPost ($id: ID!) {
   }
 }
 </page-query>
-
+<script>
+export default {
+  components: {
+    AppBar: () => import("~/components/organisms/Header.vue")
+  }
+};
+</script>
 <style scoped lang="scss">
-.single-article {
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #ccd7dd;
+  height: 500px;
+  overflow: hidden;
+  &__img {
+    position: absolute;
+    width: 100%;
+    opacity: 0.8;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+  }
+}
+.post {
+  max-width: 100%;
+  padding: 20px 300px;
   &__header {
   }
-  &__image {
-    background-size: cover;
-    overflow: hidden;
-    text-align: center;
+  &__content {
     img {
-      background-size: cover;
-   }
+      width: calc(100% + var(--space) * 2);
+      margin-left: calc(var(--space) * -1);
+      display: block;
+      max-width: none;
+    }
   }
-
-  &__body {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 0 20px;
+  &__footer {
   }
 }
 </style>
