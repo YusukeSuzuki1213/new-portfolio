@@ -1,6 +1,11 @@
+html {
+  --base-font-size: 19px;
+}
+
 body {
   --space: 3.5rem;
-  
+  --border-color: rgba(0, 0, 0, .1);
+  --title-color: #111;
 }
 
 $pc-content-width: 750px;

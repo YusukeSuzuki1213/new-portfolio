@@ -5,6 +5,9 @@
         <g-image class="header__img" :src="$page.blogPost.src" />
       </header>
       <main class="main">
+        <div class="post-title">
+          <h1 class="post-title__text">{{ $page.blogPost.title }}</h1>
+        </div>
         <div class="post">
           <div class="post__header"></div>
           <div class="post__content" v-html="$page.blogPost.content"></div>
@@ -39,7 +42,12 @@ export default {
   }
 };
 </script>
-<style scoped lang="scss">
+<style lang="scss">
+.post-title {
+  padding: 80px 0;
+  text-align: center;
+}
+
 .header {
   position: relative;
   width: 100%;
@@ -55,17 +63,19 @@ export default {
     background-size: cover;
   }
 }
+.main {
+}
+
 .post {
-  max-width: 100%;
-  padding: 20px 300px;
+  max-width: 860px;
+  margin: 0 auto;  
+  padding: 15px;
   &__header {
   }
   &__content {
     img {
-      width: calc(100% + var(--space) * 2);
-      margin-left: calc(var(--space) * -1);
-      display: block;
-      max-width: none;
+      margin-top: 1.25rem;
+      width: 100%;
     }
   }
   &__footer {

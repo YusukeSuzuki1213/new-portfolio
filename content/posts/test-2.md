@@ -48,8 +48,7 @@ determines the header level.)
 
 ### Images
 
-Images are added with `![Image Alt](https://blog-imgs-54-origin.fc2.com/j/i/k/jikomanzoku009/zoku_1.jpg)`
-![Image Alt](https://blog-imgs-54-origin.fc2.com/j/i/k/jikomanzoku009/zoku_1.jpg)
+Images are added with `![Image Alt](https://blog-imgs-54-origin.fc2.com/j/i/k/jikomanzoku009/zoku_1.jpg)`![Image Alt](https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg)
 
 
 ### Blockquotes
