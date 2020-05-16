@@ -67,7 +67,7 @@ export default {
 }
 
 .post {
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;  
   padding: 15px;
   &__header {
