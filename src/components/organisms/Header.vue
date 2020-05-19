@@ -1,22 +1,25 @@
 <template>
-  <header class="header">
-    <h1 class="header__title">Yusuke's Portfolio</h1>
-    <div class="header__body">
+  <v-app-bar class="header" app color="black" dark flat>
+    <div class="header__title">
+      <h1>Yusuke's portfolio</h1>
+    </div>
+    <div class="header__contents">
       <nav class="nav">
-        <ul>
-          <li class="nav__item" v-for="(link, index) in links" :key="index">
-            <g-link class="nav__link" :to="link.to">{{ link.text }}</g-link>
-          </li>
-        </ul>
+        <g-link
+          class="nav__link"
+          v-for="(content, index) in contents"
+          :key="index"
+          :to="content.to"
+        >{{ content.text }}</g-link>
       </nav>
     </div>
-  </header>
+  </v-app-bar>
 </template>
 
 <script>
 export default {
   data: () => ({
-    links: [
+    contents: [
       {
         text: "Top",
         to: "/"
@@ -40,43 +43,25 @@ export default {
 
 <style scoped lang="scss">
 .header {
-  background-color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  margin: 0 auto;
-  transition: height 0s ease 0s, opacity 0.4s ease 0s;
-  z-index: 200;
-  overflow: hidden;
   &__title {
-    display: block;
-    position: absolute;
-    top: 22px;
-    left: 36px;
-    line-height: 0;
-    color: #FFFF;
+    margin-right: auto;
+    h1 {
+      margin-bottom: 0px;//vuetify 上書き
+      font-size: 20px;      
+    }
   }
-  &__body {
-    position: relative;
-    width: 100%;
+  &__contents {
+    margin-left: auto;
+  }
+}
+.nav {
+  &__link {
+    margin: 0 8px;
+    color: white;
+    @include sp() {
+       margin: 0 5px;
+    }
   }
 }
 
-.nav {
-  position: absolute;
-  top: 28px;
-  right: 340px;
-  line-height: 0;
-  &__link {
-    margin-left: 20px;
-    //color: white;
-  }
-  &__item {
-    display: inline-block;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-  }
-}
 </style>
