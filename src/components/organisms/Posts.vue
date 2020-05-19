@@ -1,6 +1,8 @@
 <template>
-  <section class="hhh">
-    <h1 class="text-center font-weight-bold mb-3">Posts</h1>
+  <section class="page">
+    <div class="page__title">
+      <h2 class="text-center font-weight-bold mb-3">Posts</h2>
+    </div>
     <div class="works-list">
       <ArticleList :articles="posts" :isClickable="true" />
     </div>
@@ -15,14 +17,20 @@ export default {
   props: {
     posts: {
       type: Array,
-      default: () => ([])
+      default: () => []
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-.hhh {
-  font-size: 65%;
+.page {
+  &__title {
+    margin: 70px 0;
+    text-decoration: underline
+  }
+}
+.works-list {
+  font-size: 0.65em;
 }
 </style>

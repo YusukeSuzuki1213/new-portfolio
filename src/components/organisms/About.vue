@@ -1,8 +1,9 @@
 <template>
-  <section class="pa-5">
-    <h2 class="text-center font-weight-bold mb-3">About</h2>
-    <v-container>
-      <v-row class="text-center">
+  <section class="component">
+    <div class="component__title">
+      <h2 class="text-center font-weight-bold mb-3">About</h2>
+    </div>
+    <v-container><v-row class="text-center">
         <v-col>
           <v-avatar size="200">
             <g-image src="~/assets/images/my-icon.jpeg" />
@@ -55,6 +56,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.component {
+  &__title {
+    margin: 70px 0;
+    text-decoration: underline
+  }
+}
 .table {
   text-align: left;
   &__td {

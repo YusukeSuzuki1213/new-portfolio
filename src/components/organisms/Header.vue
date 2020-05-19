@@ -59,11 +59,11 @@ export default {
 }
 .nav {
   &__link {
-    margin: 0 8px;
+    margin: 0 10px;
     color: white;
     @include sp() {
       font-size: 15px;
-      margin: 0 5px;
+      margin: 0 6px;
     }
   }
 }

@@ -73,7 +73,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 50px 15px;
+  padding: 0 15px 100px 15px;
   max-width: 1000px;
   margin: 0 auto;
   &__link {
@@ -108,6 +108,7 @@ export default {
     .article-text-block-main {
       width: 100%;
       .article-title {
+        margin: 5px 0;
         &--blue {
           @include sp() {
             color: #0066cb;

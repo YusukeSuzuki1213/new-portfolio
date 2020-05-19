@@ -1,14 +1,16 @@
 <template>
-  <section class="pa-5">
-    <h2 class="text-center font-weight-bold mb-3">Contacts</h2>
-    <IconList :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize"/>
+  <section class="component">
+    <div class="component__title">
+      <h2 class="text-center font-weight-bold mb-3">Contacts</h2>
+    </div>
+    <IconList :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize" />
   </section>
 </template>
 
 <script>
 export default {
   components: {
-    IconList: () => import("~/components/molecules/IconList.vue"),
+    IconList: () => import("~/components/molecules/IconList.vue")
   },
   data: () => ({
     contents: [
@@ -58,7 +60,7 @@ export default {
           useFontAwesome: true,
           prefix: "fab",
           name: "instagram"
-        },        
+        },
         size: "40",
         url: "https://www.instagram.com/yusuke.suzuki.a/"
       }
@@ -71,3 +73,12 @@ export default {
   })
 };
 </script>
+
+<style scoped lang="scss">
+.component {
+  &__title {
+    margin: 70px 0 30px 0;
+    text-decoration: underline
+  }
+}
+</style>

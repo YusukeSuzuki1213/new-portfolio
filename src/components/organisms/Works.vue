@@ -1,8 +1,10 @@
 <template>
-  <section class="hhh">
-    <h1 class="text-center font-weight-bold mb-3">Works</h1>
+  <section class="page">
+    <div class="page__title">
+      <h2 class="text-center font-weight-bold mb-3">Works</h2>
+    </div>
     <div class="works-list">
-      <ArticleList :articles="workPosts" :isClicable="isClicable" :iconSize="iconSize"/>     
+      <ArticleList :articles="workPosts" :isClicable="isClicable" :iconSize="iconSize" />
     </div>
   </section>
 </template>
@@ -16,18 +18,24 @@ export default {
   props: {
     workPosts: {
       type: Array,
-      default: () => ([])
+      default: () => []
     }
   },
   data: () => ({
     isClicable: false,
-    iconSize: "lg", // size: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
+    iconSize: "lg" // size: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
   })
 };
 </script>
 
 <style scoped lang="scss">
-.hhh {
-  font-size: 65%;
+.page {
+  &__title {
+    margin: 70px 0;
+    text-decoration: underline
+  }
+}
+.works-list {
+  font-size: 0.65em;
 }
 </style>
