@@ -45,9 +45,12 @@ export default {
 .header {
   &__title {
     margin-right: auto;
+    @include sp() {
+      width: 100px;
+    }
     h1 {
-      margin-bottom: 0px;//vuetify 上書き
-      font-size: 20px;      
+      margin-bottom: 0px; //vuetify 上書き
+      font-size: 20px;
     }
   }
   &__contents {
@@ -59,9 +62,9 @@ export default {
     margin: 0 8px;
     color: white;
     @include sp() {
-       margin: 0 5px;
+      font-size: 15px;
+      margin: 0 5px;
     }
   }
 }
-
 </style>
