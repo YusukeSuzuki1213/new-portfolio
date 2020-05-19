@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div>
+    <article>
       <header class="header">
         <g-image class="header__img" :src="$page.blogPost.src" />
       </header>
@@ -14,7 +14,7 @@
           <div class="post__footer"></div>
         </div>
       </main>
-    </div>
+    </article>
   </Layout>
 </template>
 
