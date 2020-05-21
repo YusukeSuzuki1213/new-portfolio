@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f509dc74-57dc-4cbc-a35f-3775d29fe428/deploy-status)](https://app.netlify.com/sites/yusuke-suzuki/deploys)
+
 # Default starter for Gridsome
 
 This is the project you get when you run `gridsome create new-project`.
