@@ -18,6 +18,13 @@ $pc-content-width: 750px;
   }
 }
 
+@mixin tablet() {
+  @media screen and (max-width: 1024px + 1) {
+    @content;
+  }
+}
+
+
 @mixin sp() {
   @media screen and (max-width: $pc-content-width) {
     @content;

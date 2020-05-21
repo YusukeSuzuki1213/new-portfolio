@@ -44,7 +44,7 @@ export default {
 </script>
 <style lang="scss">
 .post-title {
-  padding: 80px 0;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -54,6 +54,9 @@ export default {
   background-color: #ccd7dd;
   height: 500px;
   overflow: hidden;
+  @include tablet() {
+      display: none;
+    }
   &__img {
     position: absolute;
     width: 100%;
@@ -61,6 +64,9 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     background-size: cover;
+    @include tablet() {
+      display: none;
+    }
   }
 }
 .main {
@@ -68,7 +74,7 @@ export default {
 
 .post {
   max-width: 900px;
-  margin: 0 auto;  
+  margin: 0 auto;
   padding: 15px;
   &__header {
   }
