@@ -35,28 +35,21 @@ query BlogPost ($id: ID!) {
   }
 }
 </page-query>
-<script>
-export default {
-  components: {
-    AppBar: () => import("~/components/organisms/Header.vue")
-  }
-};
-</script>
+
 <style lang="scss">
 .post-title {
   padding: 50px 0;
   text-align: center;
 }
-
 .header {
   position: relative;
   width: 100%;
   background-color: #ccd7dd;
   height: 500px;
   overflow: hidden;
-  @include tablet() {
-      display: none;
-    }
+  @include tablet() {    
+    height: 0px;
+  }
   &__img {
     position: absolute;
     width: 100%;
