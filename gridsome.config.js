@@ -21,6 +21,12 @@ module.exports = {
         typeName: 'WorkPost',
         path: './content/works/**/*.md',
       }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
     }
   ],
   transformers: {

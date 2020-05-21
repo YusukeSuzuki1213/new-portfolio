@@ -2,34 +2,18 @@ backend:
   name: github
   repo: YusukeSuzuki1213/new-portfolio
 
-media_folder: "static/content"
-public_folder: "/content"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "content/posts/"
+    folder: "posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "タイトル", name: "title", widget: "string"}
-      - {label: "概要", name: "summary", widget: "string"}
-      - {label: "画像", name: "src", widget: "image"}
-      - {label: '公開日', name: "date", widget: "date"}
-      - {label: 'カテゴリ', name: "categories", widget: "list"}
-      - {label: 'タグ', name: "tags", widget: "list"}
-      - {label: "内容", name: "body", widget: "markdown"}
-  - name: "works"
-    label: "Works"
-    folder: "content/works/"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "タイトル", name: "title", widget: "string"}
-      - {label: "概要", name: "summary", widget: "string"}
-      - {label: "画像", name: "src", widget: "image"}
-      - {label: '公開日', name: "date", widget: "date"}
-      - {label: 'カテゴリ', name: "categories", widget: "list"}
-      - {label: 'タグ', name: "tags", widget: "list"}
-      - {label: 'リンク', name: "links", widget: "list"}
-      - {label: "内容", name: "body", widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Body", name: "body", widget: "markdown"}  
+
