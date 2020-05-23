@@ -12,20 +12,22 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: './content/posts/**/*.md',
+        path: './uploads/posts/**/*.md',
+        resolveAbsolutePaths: true,
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'WorkPost',
-        path: './content/works/**/*.md',
+        path: './uploads/works/**/*.md',
+        resolveAbsolutePaths: true,
       }
     },
     {
       use: `gridsome-plugin-netlify-cms`,
       options: {
-        publicPath: `/admin`
+        publicPath: `/admin`,        
       }
     }
   ],

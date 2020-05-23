@@ -16,7 +16,7 @@ query BlogPost {
           content
           title          
           summary
-          src
+          thumbnail
           date
           categories
           tags

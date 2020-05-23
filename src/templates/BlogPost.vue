@@ -2,7 +2,7 @@
   <Layout>
     <article>
       <header class="header">
-        <g-image class="header__img" :src="$page.blogPost.src" />
+        <g-image class="header__img" :src="$page.blogPost.thumbnail" />
       </header>
       <main class="main">
         <div class="post-title">
@@ -26,7 +26,7 @@ export default {};
 query BlogPost ($id: ID!) {
   blogPost(id: $id) {
     title
-    src
+    thumbnail
     date
     categories
     tags

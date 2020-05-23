@@ -8,7 +8,7 @@
       @click="postClicked(article.node.path, isClickable)"
     >
       <figure class="article-img">
-        <g-image :src="article.node.src" width="500" />
+        <g-image :src="article.node.thumbnail" width="500" />
       </figure>
       <div class="article-content">
         <div class="article-text-block-main">
