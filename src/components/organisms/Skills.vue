@@ -27,6 +27,7 @@ export default {
         { name: "JavaScript" },
         { name: "Kotlin" },
         { name: "PyTorch" },
+        { name: "Kivy" },
         { name: "Vue.js" },
         { name: "Ruby on Rails" },
         { name: "Git" },

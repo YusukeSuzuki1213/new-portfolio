@@ -1,7 +1,7 @@
 ---
 title: "Smart Bath"
 summary: "お風呂設置されたマイクに話しかけると、自動でシャワーを出す、自動でシャンプーを出す、音楽を再生することができます。さらに、お風呂での水の使用料を計測しており、1日の水の使用料をLINEで通知してくれます。"
-src: "./images/work-1.png"
+thumbnail: /uploads/images/work-1.png
 date: "201x.xx.xx"
 links: 
   - name: "youtube"

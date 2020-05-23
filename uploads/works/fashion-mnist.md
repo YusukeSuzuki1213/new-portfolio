@@ -1,7 +1,7 @@
 ---
 title: "Fashion MNIST"
 summary: "機械学習勉強会の資料として公開しました。"
-src: "./images/work-3.png"
+thumbnail: /uploads/images/work-3.png
 date: "201x.xx.xx"
 links: 
   - name: "Github"

@@ -18,5 +18,34 @@ collections:
       - { label: "カテゴリー(カンマ区切り)", name: "categories", widget: "list" }
       - { label: "タグ(カンマ区切り)", name: "tags", widget: "list" }
       - { label: "記事", name: "body", widget: "markdown" }
+  
+  - name: "works"
+    label: "Works"
+    folder: "uploads/works"
+    slug: "{{year}}_{{month}}_{{day}}_{{slug}}"
+    create: true
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }      
+      - { label: "概要(150字前後)", name: "summary", widget: "string" }
+      - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
+      - { label: "日付", name: "date", widget: "date", format: 'YYYY.MM.DD' }
+      - { label: "カテゴリー(カンマ区切り)", name: "categories", widget: "list" }
+      - { label: "タグ(カンマ区切り)", name: "tags", widget: "list" }
+      - { label: "記事", name: "body", widget: "markdown" }
+      - label: "リンク(アイコンの名前のみ入力するだけでいいように修正予定)"
+        name: "link"
+        widget: "list"
+        collapsed: false        
+        fields:
+          - { label: "アイコンサイズ(フォントアウェアサムは20)", name: "size", widget: "number", valueType: "int", default: 20}
+          - { label: "URL", name: "url", widget: "string"}
+          - label: "アイコン"
+            name: "icon"
+            widget: "list"            
+            fields:
+              - {label: "fontawesomeを使うか", name: "useFontAwesome", widget: "boolean", default: true}
+              - {label: "fontawesomeのプレフィックス(使用しない場合は空白/e.g, fab/fas)", name: "prefix", widget: "string", required: false}
+              - {label: "アイコンの名前(e.g, youtube/github/globe/android/$vuetify.icons.iconGoogleColab)", name: "name", widget: "string", default: ""}
+          
 
 

@@ -16,10 +16,9 @@ query WorkPost {
           content
           title          
           summary
-          src
+          thumbnail
           date
-          links {
-            name
+          links {            
             icon {
               useFontAwesome
               prefix

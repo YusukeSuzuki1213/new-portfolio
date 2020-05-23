@@ -23,7 +23,7 @@ export default {
   },
   data: () => ({
     isClicable: false,
-    iconSize: "lg" // size: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
+    iconSize: "lg", // size: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons  
   })
 };
 </script>

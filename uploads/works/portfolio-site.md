@@ -1,7 +1,7 @@
 ---
 title: "Portfolio Site"
 summary: "ポートフォリオサイトです"
-src: "./images/work-4.png"
+thumbnail: /uploads/images/work-4.png
 date: "2020.xx.xx"
 links: 
   - name: "Github"
