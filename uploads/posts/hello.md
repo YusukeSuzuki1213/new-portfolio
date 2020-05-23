@@ -1,7 +1,7 @@
 ---
-title: yusuke
+title: yusukess
 summary: ss
-thumbnail: /uploads/スクリーンショット-2020-05-19-01.31.50.png
+thumbnail: /uploads/images/スクリーンショット-2020-04-18-23.02.41.png
 date: 2020.05.08
 categories:
   - hell
