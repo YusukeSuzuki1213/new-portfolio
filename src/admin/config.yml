@@ -1,22 +1,22 @@
 backend:
   name: github
   repo: YusukeSuzuki1213/new-portfolio
-y
-media_folder: "static/uploads"
-public_folder: "/uploads"
+
+media_folder: "uploads/images"
 
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "uploads/posts"
+    slug: "{{year}}_{{month}}_{{day}}_{{slug}}"
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "title", name: "title", widget: "string" }      
-      - { label: "summary", name: "summary", widget: "date" }
-      - { label: "src", name: "src", widget: "markdown" }  
-      - { label: "date(e.g, )", name: "date", widget: "markdown" }
-      - { label: "categories", name: "categories", widget: "markdown" }
-      - { label: "tags", name: "tags", widget: "markdown" }
+      - { label: "タイトル", name: "title", widget: "string" }      
+      - { label: "概要(150字前後)", name: "summary", widget: "string" }
+      - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
+      - { label: "日付", name: "date", widget: "date", format: 'YYYY.MM.DD' }
+      - { label: "カテゴリー(カンマ区切り)", name: "categories", widget: "list" }
+      - { label: "タグ(カンマ区切り)", name: "tags", widget: "list" }
+      - { label: "記事", name: "body", widget: "markdown" }
 
 
