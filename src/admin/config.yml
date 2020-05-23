@@ -33,7 +33,7 @@ collections:
       - { label: "タグ(カンマ区切り)", name: "tags", widget: "list" }
       - { label: "記事", name: "body", widget: "markdown" }
       - label: "リンク(アイコンの名前のみ入力するだけでいいように修正予定)"
-        name: "link"
+        name: "links"
         widget: "list"
         collapsed: false        
         fields:
@@ -41,11 +41,8 @@ collections:
           - { label: "URL", name: "url", widget: "string"}
           - label: "アイコン"
             name: "icon"
-            widget: "list"            
+            widget: "object"            
             fields:
               - {label: "fontawesomeを使うか", name: "useFontAwesome", widget: "boolean", default: true}
-              - {label: "fontawesomeのプレフィックス(使用しない場合は空白/e.g, fab/fas)", name: "prefix", widget: "string", required: false}
+              - {label: "fontawesomeのプレフィックス(使用しない場合は空白/e.g, fab/fas)", name: "prefix", widget: "string", required: false, default: ""}
               - {label: "アイコンの名前(e.g, youtube/github/globe/android/$vuetify.icons.iconGoogleColab)", name: "name", widget: "string", default: ""}
-          
-
-
