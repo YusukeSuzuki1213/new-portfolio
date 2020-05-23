@@ -14,8 +14,7 @@ query BlogPost {
           id
           path
           content
-          title
-          subtitle
+          title          
           summary
           src
           date

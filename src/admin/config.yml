@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: YusukeSuzuki1213/new-portfolio
-
+y
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
@@ -12,8 +12,11 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "date"}
-      - {label: "Body", name: "body", widget: "markdown"}  
+      - { label: "title", name: "title", widget: "string" }      
+      - { label: "summary", name: "summary", widget: "date" }
+      - { label: "src", name: "src", widget: "markdown" }  
+      - { label: "date(e.g, )", name: "date", widget: "markdown" }
+      - { label: "categories", name: "categories", widget: "markdown" }
+      - { label: "tags", name: "tags", widget: "markdown" }
+
 

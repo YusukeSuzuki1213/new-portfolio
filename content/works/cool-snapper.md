@@ -1,6 +1,5 @@
 ---
 title: "Cool Snapper"
-subtitle: "カッコ良くページをめくる"
 summary: "Google Playでリリースしています。アルバイトとして、有限会社クリップソフトにて設計から開発まで、1人で担当させていただきました。"
 src: "./images/work-2.png"
 date: "201x.xx.xx"

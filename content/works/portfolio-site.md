@@ -1,6 +1,5 @@
 ---
 title: "Portfolio Site"
-subtitle: "ポートフォリオサイト"
 summary: "ポートフォリオサイトです"
 src: "./images/work-4.png"
 date: "2020.xx.xx"

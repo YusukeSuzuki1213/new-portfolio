@@ -26,7 +26,6 @@ export default {};
 query BlogPost ($id: ID!) {
   blogPost(id: $id) {
     title
-    subtitle
     src
     date
     categories
