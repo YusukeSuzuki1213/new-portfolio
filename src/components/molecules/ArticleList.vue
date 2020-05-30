@@ -108,7 +108,8 @@ export default {
     .article-text-block-main {
       width: 100%;
       .article-title {
-        margin: 5px 0;
+        font-size: 2.0em;
+        margin: 10px 0;
         &--blue {
           @include sp() {
             color: #0066cb;
@@ -126,7 +127,7 @@ export default {
         overflow: hidden;
         margin-top: 6px;
         color: #808085;
-        font-size: 1.3em;
+        font-size: 1.35em;
       }
     }
     .article-text-block-bottom {
