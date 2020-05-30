@@ -126,7 +126,7 @@ export default {
         overflow: hidden;
         margin-top: 6px;
         color: #808085;
-        font-size: 1.2em;
+        font-size: 1.3em;
       }
     }
     .article-text-block-bottom {

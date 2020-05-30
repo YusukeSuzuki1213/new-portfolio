@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <article>
+    <article class="article-wrap">
       <header class="header">
         <g-image class="header__img" :src="$page.blogPost.thumbnail" />
       </header>
@@ -36,9 +36,19 @@ query BlogPost ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+.article-wrap {  
+  font-size: 0.8em;
+}
 .post-title {
-  padding: 50px 0;
+  margin-top: 60px;
+  margin-bottom: 0px;
   text-align: center;
+  &__text {
+    border-bottom: 0px;
+  }
+  @include sp() {
+    padding: 20px;
+  }
 }
 .header {
   position: relative;
@@ -46,7 +56,7 @@ query BlogPost ($id: ID!) {
   background-color: #ccd7dd;
   height: 500px;
   overflow: hidden;
-  @include tablet() {    
+  @include tablet() {
     height: 0px;
   }
   &__img {
@@ -62,6 +72,44 @@ query BlogPost ($id: ID!) {
   }
 }
 .main {
+  .post {
+    h1 {
+      margin-top: 60px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3em;
+    }
+    h2 {
+      border-bottom: 1px solid #ddd;
+    }
+    p {
+      line-height: 2;
+    }
+    ul,
+    ol {
+      padding-left: 34px;
+      margin-bottom: 1.25em;
+    }
+    blockquote {
+      margin-left: 8px;
+      border-left: 4px solid var(--border-color);
+      padding-left: calc(var(--space) / 2);
+      color: #777;
+    }
+    pre {
+      code:before {
+        content: "";
+        letter-spacing: 0px;
+      }
+    }
+    img {
+      display: block;
+      width: 70%;
+      margin: 15px auto 30px auto;
+      @include sp() {
+        width: 95%;
+      }
+    }
+  }
 }
 
 .post {

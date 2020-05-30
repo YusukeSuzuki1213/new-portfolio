@@ -31,6 +31,6 @@ export default {
   }
 }
 .works-list {
-  font-size: 0.65em;
+  font-size: 0.6em;  
 }
 </style>
