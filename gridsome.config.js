@@ -29,6 +29,15 @@ module.exports = {
       options: {
         publicPath: `/admin`,        
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-168079057-1',
+        autoTracking: {
+          screenview: true
+        }
+      }
     }
   ],
   transformers: {
