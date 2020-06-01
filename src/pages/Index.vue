@@ -10,11 +10,6 @@
 </template>
 
 <script>
-export default {
-  mounted(){
-    this.$ga.page('/');
-  }
-}
 </script>
 
 <style scoped lang="scss">

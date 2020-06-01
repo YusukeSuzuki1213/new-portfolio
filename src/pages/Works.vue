@@ -40,9 +40,6 @@ query WorkPost {
 export default {
   components: {
     Works: () => import("~/components/organisms/Works")
-  },
-  mounted() {   
-    this.$ga.page('/works');
   }
 };
 </script>

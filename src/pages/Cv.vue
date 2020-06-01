@@ -15,9 +15,6 @@ export default {
     About: () => import("~/components/organisms/About"),
     Skills: () => import("~/components/organisms/Skills"),
     Contacts: () => import("~/components/organisms/Contacts")
-  },
-  mounted() {
-    this.$ga.page('/cv');
   }
 };
 </script>
