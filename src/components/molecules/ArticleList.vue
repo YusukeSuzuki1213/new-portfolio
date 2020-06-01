@@ -20,7 +20,7 @@
           <p class="article-summary">{{ article.node.summary }}</p>
         </div>
         <div class="article-text-block-bottom">          
-          <IconList :contents="article.node.links" :buttonSize="buttonSize" :iconSize="iconSize" :parentName="works"/> <!-- TODO: parentNameがよくない。このコンポーネントはworks以外からも使われるので。 -->
+          <IconList :contents="article.node.links" :buttonSize="buttonSize" :iconSize="iconSize" :parentName="'works'"/> <!-- TODO: parentNameがよくない。このコンポーネントはworks以外からも使われるので。 -->
         </div>
       </div>      
     </article>

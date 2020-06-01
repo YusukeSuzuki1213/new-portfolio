@@ -47,7 +47,7 @@ export default {
     async sendGa(category, action, label = "none") {
       this.$ga.event({
         eventCategory: category, // work or contact
-        eventAction: name, // どのworkか
+        eventAction: action, // どのworkか
         eventLabel: label // どのサイトか
       });
     }

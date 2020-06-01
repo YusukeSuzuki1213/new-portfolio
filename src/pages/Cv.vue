@@ -1,19 +1,23 @@
 <template>
   <Layout>
     <div class="cv">
-      <About />
-      <Contacts />
+      <About />      
       <Skills />
+      <Contacts />
     </div>
   </Layout>
 </template>
 
 <script>
 export default {
+  name: "cv",
   components: {
     About: () => import("~/components/organisms/About"),
-    Skills: () => import("~/components/organisms/Contacts"),
-    Contacts: () => import("~/components/organisms/Skills")
+    Skills: () => import("~/components/organisms/Skills"),
+    Contacts: () => import("~/components/organisms/Contacts")
+  },
+  mounted() {
+    this.$ga.page('/cv');
   }
 };
 </script>

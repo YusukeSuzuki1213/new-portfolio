@@ -3,7 +3,7 @@
     <div class="component__title">
       <h2 class="text-center font-weight-bold mb-3">Contacts</h2>
     </div>
-    <IconList :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize" :parentName="Contacts"/>
+    <IconList :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize" :parentName="'Contacts'"/>
   </section>
 </template>
 

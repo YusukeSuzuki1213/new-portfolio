@@ -31,6 +31,9 @@ query BlogPost {
 export default {
   components: {
     Posts: () => import("~/components/organisms/Posts"),
+  },
+  mounted() {   
+    this.$ga.page('/posts');
   }
 };
 </script>
