@@ -11,7 +11,6 @@ categories:
   - Firebase
 tags:
   - Firebase Test Lab
-  - ""
 ---
 # 概要
 本記事ではGithub Actionsを使用して、Firebase Test Labで実機テストを行う方法を紹介します。
