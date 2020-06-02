@@ -7,10 +7,9 @@ links:
   - name: "Google Play"
     icon: 
       useFontAwesome: true
-      prefix: "fab"
-      name: "android"
+      prefix: fab
+      name: android
     size: "20"
-    url: "https://play.google.com/store/apps/details?id=com.clipsoft.coolsnapper&hl=ja&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-categories: ["programming"]
-tags: ["Android", "Kotlin", "Android Jetpack"]
+    url: https://play.google.com/store/apps/details?id=com.clipsoft.coolsnapper&hl=ja&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1
 ---
+
