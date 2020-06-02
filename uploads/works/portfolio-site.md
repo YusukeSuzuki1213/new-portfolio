@@ -1,8 +1,8 @@
 ---
-title: "Portfolio Site"
-summary: "ポートフォリオサイトです"
+title: "[WIP] Portfolio Site"
+summary: "ポートフォリオサイト兼ブログです。VueとGridsomeを用いて作成しました。レポジトリが更新されると自動でNetlifyにデプロイされます。さらに、Netlify CMSを使用することでプレビューしながらMarkdown記事を書くことができます。"
 thumbnail: /uploads/images/work-4.png
-date: "2020.xx.xx"
+date: "2020.06.01"
 links: 
   - name: "Github"
     icon: 

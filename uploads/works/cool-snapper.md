@@ -1,8 +1,8 @@
 ---
 title: "Cool Snapper"
-summary: "Google Playでリリースしています。アルバイトとして、有限会社クリップソフトにて設計から開発まで、1人で担当させていただきました。"
+summary: "カッコいい動きで世界を変えるPDFビューアアプリです。 タップやスライド操作に加え、指を鳴らしてページをめくったり、 端末に手をかざしてページをみくったりすることができます。アルバイトとして、有限会社クリップソフトにて設計から開発まで、1人で担当させていただき、Google Playでリリースしました。"
 thumbnail: /uploads/images/work-2.png
-date: "201x.xx.xx"
+date: "2019.12.27"
 links: 
   - name: "Google Play"
     icon: 

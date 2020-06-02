@@ -35,6 +35,16 @@ export default {
         url: "https://www.facebook.com/rzug84rke"
       },
       {
+        name: "Youtube",
+        icon: {
+          useFontAwesome: true,
+          prefix: "fab",
+          name: "youtube"
+        },
+        size: "40",
+        url: "https://www.youtube.com/channel/UC0hsoreL2qqXlnhDqvU7Q4A"
+      },
+      /* {
         name: "Qiita",
         icon: {
           useFontAwesome: false,
@@ -43,8 +53,8 @@ export default {
         },
         size: "55",
         url: "https://qiita.com/YusukeSuzuki1213"
-      },
-      {
+      }, */
+      /* {
         name: "Twitter",
         icon: {
           useFontAwesome: true,
@@ -53,8 +63,8 @@ export default {
         },
         size: "40",
         url: "https://twitter.com/ss1ua2zt1us3uki"
-      },
-      {
+      }, */
+      /* {
         name: "Instagram",
         icon: {
           useFontAwesome: true,
@@ -63,7 +73,7 @@ export default {
         },
         size: "40",
         url: "https://www.instagram.com/yusuke.suzuki.a/"
-      }
+      } */
     ],
     buttonSize: {
       height: "80",
