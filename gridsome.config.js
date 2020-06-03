@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Portfolio',
-  
+
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -55,5 +55,8 @@ module.exports = {
         prependData: '@import "./src/assets/scss/index.scss";'
       }
     }
-  }
+  },
+  chainWebpack(config) {
+    config.resolve.alias.set(`@images`, `@/assets/images`)
+  },
 }

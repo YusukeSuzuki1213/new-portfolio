@@ -47,8 +47,8 @@ export default {
         { property: "og:description", content: this.$page.blogPost.summary },
         {
           property: "og:image",
-          content:
-            this.$page.blogPost.thumbnail
+          content: this.$page.metadata.siteUrl +
+              require(`!!assets-loader!@images/${this.$page.blogPost.thumbnail}`).src
         }
       ]
     };
