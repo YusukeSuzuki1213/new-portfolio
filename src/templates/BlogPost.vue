@@ -43,8 +43,8 @@ export default {
           property: "og:url",
           content: "https://yusuke-suzuki.netlify.app" + this.$route.path
         },
-        { property: "og:title", content:$page.blogPost.title },
-        { property: "og:description", content: $page.blogPost.summary },
+        { property: "og:title", content:this.$page.blogPost.title },
+        { property: "og:description", content: this.$page.blogPost.summary },
         {
           property: "og:image",
           content:
