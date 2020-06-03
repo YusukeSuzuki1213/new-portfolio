@@ -47,7 +47,7 @@ export default {
         { property: "og:description", content: this.$page.blogPost.summary },
         {
           property: "og:image",
-          content: this.$page.metadata.siteUrl +
+          content:  "https://yusuke-suzuki.netlify.app" +
               require(`!!assets-loader!@images/${this.$page.blogPost.thumbnail}`).src
         }
       ]
