@@ -37,15 +37,22 @@ export default {
   metaInfo() {
     return {
       meta: [
-       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: "@ss1ua2zt1us3uki"},
-      { property: "og:url", content: 'https://yusuke-suzuki.netlify.app' + "/posts" },
-      { property: "og:title", content: "$page.blogPost.title" },
-      { property: "og:description", content: "$page.blogPost.summary" },
-      { property: "og:image", content: "https://yusuke-suzuki.netlify.app/assets/static/2020_06_03.7cfd73a.1b3765ec4cd162a7f10b6da61110dcdb.png" },
-      ],
-    }
-  },
+        { name: 'twitter:card', content: "summary" },
+        { name: "twitter:site", content: "@ss1ua2zt1us3uki" },
+        {
+          property: "og:url",
+          content: "https://yusuke-suzuki.netlify.app" + this.$route.path
+        },
+        { property: "og:title", content:$page.blogPost.title },
+        { property: "og:description", content: $page.blogPost.summary },
+        {
+          property: "og:image",
+          content:
+            "https://yusuke-suzuki.netlify.app/assets/static/2020_06_03.7cfd73a.1b3765ec4cd162a7f10b6da61110dcdb.png"
+        }
+      ]
+    };
+  }
 };
 </script>
 
