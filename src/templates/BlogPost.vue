@@ -48,7 +48,7 @@ export default {
         {
           property: "og:image",
           content:
-            require(this.$page.blogPost.thumbnail)
+            this.$page.blogPost.thumbnail
         }
       ]
     };
