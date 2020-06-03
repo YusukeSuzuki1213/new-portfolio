@@ -38,7 +38,7 @@ export default {
     meta: [
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: "@ss1ua2zt1us3uki"},
-      { property: "og:url", content: location.origin + "/posts" },
+      { property: "og:url", content: 'https://yusuke-suzuki.netlify.app' + "/posts" },
       { property: "og:title", content: "$page.blogPost.title" },
       { property: "og:description", content: "$page.blogPost.summary" },
       { property: "og:image", content: "$page.blogPost.thumbnail" },
