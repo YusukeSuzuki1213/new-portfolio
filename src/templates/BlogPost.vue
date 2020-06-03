@@ -18,10 +18,6 @@
   </Layout>
 </template>
 
-<script>
-export default {};
-</script>
-
 <page-query>
 query BlogPost ($id: ID!) {
   blogPost(id: $id) {
@@ -30,13 +26,30 @@ query BlogPost ($id: ID!) {
     date
     categories
     tags
+    summary
     content
   }
 }
 </page-query>
 
+<script>
+export default {
+  metaInfo() {   
+    meta: [
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: "@ss1ua2zt1us3uki"},
+      { property: "og:url", content: location.origin + "/posts" },
+      { property: "og:title", content: "$page.blogPost.title" },
+      { property: "og:description", content: "$page.blogPost.summary" },
+      { property: "og:image", content: "$page.blogPost.thumbnail" },
+    ]
+  }
+};
+</script>
+
+
 <style lang="scss">
-.article-wrap {  
+.article-wrap {
   font-size: 0.8em;
 }
 .post-title {
