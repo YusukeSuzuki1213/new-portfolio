@@ -34,16 +34,18 @@ query BlogPost ($id: ID!) {
 
 <script>
 export default {
-  metaInfo: {   
-    meta: [
-      { name: 'twitter:card', content: 'summary' },
+  metaInfo() {
+    return {
+      meta: [
+       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: "@ss1ua2zt1us3uki"},
       { property: "og:url", content: 'https://yusuke-suzuki.netlify.app' + "/posts" },
       { property: "og:title", content: "$page.blogPost.title" },
       { property: "og:description", content: "$page.blogPost.summary" },
       { property: "og:image", content: "https://www.jaaf.or.jp/files/player/image/64.jpg" },
-    ]
-  }
+      ],
+    }
+  },
 };
 </script>
 
