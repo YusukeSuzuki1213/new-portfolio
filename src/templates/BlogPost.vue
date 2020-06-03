@@ -34,7 +34,7 @@ query BlogPost ($id: ID!) {
 
 <script>
 export default {
-  metaInfo() {   
+  metaInfo: {   
     meta: [
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:site', content: "@ss1ua2zt1us3uki"},
