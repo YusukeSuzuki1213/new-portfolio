@@ -48,7 +48,7 @@ export default {
         {
           property: "og:image",
           content:
-            "https://yusuke-suzuki.netlify.app/assets/static/2020_06_03.7cfd73a.1b3765ec4cd162a7f10b6da61110dcdb.png"
+            require(this.$page.blogPost.thumbnail)
         }
       ]
     };
