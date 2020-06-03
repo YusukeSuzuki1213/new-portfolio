@@ -41,7 +41,7 @@ export default {
       { property: "og:url", content: 'https://yusuke-suzuki.netlify.app' + "/posts" },
       { property: "og:title", content: "$page.blogPost.title" },
       { property: "og:description", content: "$page.blogPost.summary" },
-      { property: "og:image", content: "$page.blogPost.thumbnail" },
+      { property: "og:image", content: "https://www.jaaf.or.jp/files/player/image/64.jpg" },
     ]
   }
 };
