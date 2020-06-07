@@ -13,7 +13,7 @@
 export default {
   components: {
     Header: () => import("~/components/organisms/Header.vue")
-  }
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 ---
 title: "Fashion MNIST"
 summary: "Fashin-MNISTと呼ばれるZalandoの提供する画像データセットを用いて、衣服画像を分類する深層学習のチュートリアルをGoogle Codelab上で公開しました。"
-thumbnail: /uploads/images/work-3.png
+thumbnail: work-3.png
 date: "2019.02.27"
 links: 
   - name: "Github"

@@ -2,7 +2,7 @@
   <Layout>
     <article class="article-wrap">
       <header class="header">
-        <g-image class="header__img" :src="$page.blogPost.thumbnail" />
+        <g-image class="header__img" :src="require(`!!assets-loader!@upload-images/${ $page.blogPost.thumbnail }`)" />
       </header>
       <main class="main">
         <div class="post-title">
@@ -47,8 +47,7 @@ export default {
         { property: "og:description", content: this.$page.blogPost.summary },
         {
           property: "og:image",
-          content:  "https://yusuke-suzuki.netlify.app" +
-              require(`!!assets-loader!@images/${this.$page.blogPost.thumbnail}`).src
+          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`)
         }
       ]
     };

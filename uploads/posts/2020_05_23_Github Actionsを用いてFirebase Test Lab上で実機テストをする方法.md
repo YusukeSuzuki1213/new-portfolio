@@ -3,7 +3,7 @@ title: Github Actionsを用いてFirebase Test Lab上で実機テストをする
 summary: 本記事ではGithub Actionsを使用して、Firebase Test Labで実機テストを行う方法を紹介します。
   具体的には、プルリクエストをトリガーにGithub Actionsのworkflowが起動し、Firebase Test
   Lab上でRoboテストを、自動で走らせる方法を紹介します。
-thumbnail: /uploads/images/2020_06_03.png
+thumbnail: "2020_06_03.png"
 date: 2020.06.03
 categories:
   - Android

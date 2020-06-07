@@ -40,6 +40,24 @@ query WorkPost {
 export default {
   components: {
     Works: () => import("~/components/organisms/Works")
+  },
+  metaInfo() {
+    return {
+      meta: [
+        { name: 'twitter:card', content: "summary" },
+        { name: "twitter:site", content: "@ss1ua2zt1us3uki" },
+        {
+          property: "og:url",
+          content: "https://yusuke-suzuki.netlify.app" + this.$route.path
+        },
+        { property: "og:title", content:"Yusuke's portfolio" },
+        { property: "og:description", content: "Works" },
+        {
+          property: "og:image",
+          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@assets-images/my-icon.jpeg`)
+        }
+      ]
+    };
   }
 };
 </script>
