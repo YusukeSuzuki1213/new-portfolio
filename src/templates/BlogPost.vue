@@ -2,7 +2,7 @@
   <Layout>
     <article class="article-wrap">
       <header class="header">
-        <g-image class="header__img" :src="require(`!!assets-loader!@upload-images/${ $page.blogPost.thumbnail }`)" />
+        <g-image @click="e" class="header__img" :src="require(`!!assets-loader!@upload-images/${ $page.blogPost.thumbnail }`)" />
       </header>
       <main class="main">
         <div class="post-title">
@@ -34,6 +34,11 @@ query BlogPost ($id: ID!) {
 
 <script>
 export default {
+  methods: {
+    e(){
+      console.log(require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`)).src
+    }
+  },
   metaInfo() {
     return {
       meta: [
@@ -47,7 +52,7 @@ export default {
         { property: "og:description", content: this.$page.blogPost.summary },
         {
           property: "og:image",
-          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`)
+          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`).src
         }
       ]
     };

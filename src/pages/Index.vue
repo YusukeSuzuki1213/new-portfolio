@@ -21,10 +21,10 @@ export default {
           content: "https://yusuke-suzuki.netlify.app" + this.$route.path
         },
         { property: "og:title", content:"Yusuke's portfolio" },
-        { property: "og:description", content: "Top" },
+        { property: "og:description", content: "Topページ" },
         {
           property: "og:image",
-          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@assets-images/my-icon.jpeg`)
+          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@assets-images/my-icon.jpeg`).src
         }
       ]
     };
