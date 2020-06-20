@@ -15,7 +15,8 @@ config.autoAddCss = false;
 library.add(fab, fas)
 
 export default function (Vue, { router, head, isClient, appOptions }) {
-  Vue.use(Vuetify)
+  Vue.use(Vuetify)  
+  head.script.push({ src: 'https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js' })
   appOptions.vuetify = new Vuetify({
     icons: {
       iconfont: 'fa',
@@ -29,7 +30,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       }
     }
   });
-
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('font-awesome', FontAwesomeIcon)
