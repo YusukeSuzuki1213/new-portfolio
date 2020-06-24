@@ -33,4 +33,12 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('font-awesome', FontAwesomeIcon)
+  // 共通で使えるメソッド
+  Vue.mixin({
+    methods: {
+      $delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms))
+      }
+    }
+  })
 }

@@ -1,9 +1,8 @@
 <template>
   <Layout>
-    <div class="main">
+    <div class="main-wrap">
       <div class="anim-wrap" id="wrap">
         <div class="anim-wrap__box" id="box">
-          <button @click="start" id="button-start">start</button>
           <h2 class="anim-wrap__box__title" id="title">かれんビー 其ノ貳</h2>
           <div class="anim-wrap__box__sentence">上の</div>
           <div class="anim-wrap__box__sentence">阿良々木火憐</div>
@@ -19,6 +18,10 @@
           <div class="anim-wrap__box__sentence">なまじ火憐は格闘技に手を出しているので、すごく姿勢がいいのだった。</div>
           <div class="anim-wrap__box__sentence">なまじ火sに中学デビューを果るので、のだった。</div>
           <div class="anim-wrap__box__sentence">な手彼女は髪を染めたこで、すごく姿勢がいいのだったかりのころだったか、彼女は。</div>
+          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
+          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
+          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
+          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
           <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
         </div>
       </div>
@@ -48,17 +51,20 @@ export default {
       ]
     };
   },
+  async mounted() {
+    await this.$delay(1500);
+    this.changeColor();
+    this.frameAnimation();
+    this.charAnimation(this.charAnimationCore);
+  },
   methods: {
-    start() {
-      this.changeColor();
-      this.frameAnimation();
-      this.charAnimation(this.charAnimationCore);
-    },
-
     changeColor() {
-      const element = document.getElementById("box");
-      element.style.background = "#656490";
-      element.style.color = "#d5d6f0";
+      const wrapElement = document.getElementById("wrap");
+      wrapElement.style.background = "#656490";      
+      
+      const boxElement = document.getElementById("box");
+      boxElement.style.color = "#d5d6f0";
+      boxElement.style.overflow = "visible";
 
       document.getElementById("title").style.visibility = "visible";
     },
@@ -197,7 +203,7 @@ export default {
 
       elem.animate(animateList, {
         delay: delay,
-        duration: 2400,
+        duration: 2200,
         fill: "forwards",
         easing: "ease-in-out"
       });
@@ -207,17 +213,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.anim-wrap {
-  height: 100vh;
-  width: 100%;
+.anim-wrap {  
+  display: flex;
+  height: calc(100vh - 64px);
+  justify-content: center;
+  align-items: center;  
+  background: #fbf5f8;
   &__box {
     position: relative;
-    width: 100%;
+    width: 80%;
+    height: 80%;
     color: #e89eb8;
-    background: #fbf5f8;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    padding: 50px 0px;
+    //padding: 60px 180px;
+    //margin: 60px 5px;
     overflow: hidden;
     &__title {
       position: absolute;
@@ -238,10 +248,14 @@ export default {
       line-height: 2;
       margin-left: 20px;
     }
+    /* &::after {
+      position: absolute;
+      bottom: 0;
+      content: " ";
+      background-color: red;
+      height: 30px;
+      width: 30px;
+    } */
   }
-}
-
-#button-start {
-  position: absolute;
 }
 </style>
