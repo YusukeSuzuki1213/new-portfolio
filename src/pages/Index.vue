@@ -64,7 +64,7 @@ export default {
       
       const boxElement = document.getElementById("box");
       boxElement.style.color = "#d5d6f0";
-      boxElement.style.overflow = "visible";
+      //boxElement.style.overflow = "visible";
 
       document.getElementById("title").style.visibility = "visible";
     },
@@ -226,9 +226,13 @@ export default {
     color: #e89eb8;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
+    //overflow-x: hidden;
+    //overflow: hidden;
+    clip-path: inset( -100vw -100vw -100vw 0 );
+    //overflow-y: visible;
     //padding: 60px 180px;
     //margin: 60px 5px;
-    overflow: hidden;
+    
     &__title {
       position: absolute;
       top: 50%;
