@@ -15,7 +15,7 @@ links:
     icon: 
       useFontAwesome: false
       prefix: ""
-      name: "$vuetify.icons.iconGoogleColab"
+      name: "GoogleColab"
     size: "22"
     url: "https://colab.research.google.com/github/YusukeSuzuki1213/fashion-MNIST/blob/master/Fashion-MNIST.ipynb"
 categories: ["programming", "Machine Learning"]

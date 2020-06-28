@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class="works">
-      <Works :workPosts="$page.works.edges"/>
+    <div class="wrap">
+      <Works class="wrap__works" :workPosts="$page.works.edges"/>
     </div>
   </Layout>
 </template>
@@ -62,6 +62,10 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+.wrap {
+  &__works {
+    margin: 50px 5px 0px 5px;
+  }
+}
 </style>

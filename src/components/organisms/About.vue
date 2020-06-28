@@ -3,28 +3,19 @@
     <div class="component__title">
       <h2 class="text-center font-weight-bold mb-3">About</h2>
     </div>
-    <v-container><v-row class="text-center">
-        <v-col>
-          <v-avatar size="200">
-            <g-image src="~/assets/images/my-icon.jpeg" />
-          </v-avatar>
-        </v-col>
-      </v-row>
 
-      <v-row justify="center">
-        <table class="table">
-          <tbody>
-            <tr v-for="(content, index) in contents" :key="index">
-              <td class="table__td">{{ content.key }}</td>
-              <td class="table__td" v-if="content.url">
-                <a :href="content.url" target="_blank">{{ content.value }}</a>
-              </td>
-              <td v-else class="table__td">{{ content.value }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </v-row>
-    </v-container>
+    <figure class="component__avatar">
+      <g-image src="~/assets/images/my-icon.jpeg" />
+    </figure>
+
+    <table class="component__table">
+      <tbody>
+        <tr v-for="(content, index) in contents" :key="index">
+          <td>{{ content.key }}</td>
+          <td>{{ content.value }}</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </template>
 
@@ -56,17 +47,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.component {
+.component {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
   &__title {
-    margin: 70px 0;
-    text-decoration: underline
+    font-size: 2rem;
+    text-decoration: underline;
   }
-}
-.table {
-  text-align: left;
-  &__td {
-    padding-left: 30px;
-    padding-top: 5px;
+  &__avatar {
+    margin-top: 20px;
+    img {
+      width: 225px;
+      border-radius: 50%;
+    }
+  }
+  &__table {
+    margin-top: 20px;
+    text-align: left;
+    td {
+      padding-left: 30px;
+      padding-top: 8px;
+    }
   }
 }
 </style>

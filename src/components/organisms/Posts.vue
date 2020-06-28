@@ -1,9 +1,9 @@
 <template>
   <section class="page">
     <div class="page__title">
-      <h2 class="text-center font-weight-bold mb-3">Posts</h2>
+      <h2 class="text-center">Posts</h2>
     </div>
-    <div class="works-list">
+    <div class="page__posts-list">
       <ArticleList :articles="posts" :isClickable="true" />
     </div>
   </section>
@@ -25,12 +25,16 @@ export default {
 
 <style scoped lang="scss">
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title {
-    margin: 70px 0;
+    font-size: 2rem;
     text-decoration: underline
   }
-}
-.works-list {
-  font-size: 0.6em;  
+  &__posts-list {
+    margin: 50px 0;
+    font-size: 0.6em;  
+  }
 }
 </style>

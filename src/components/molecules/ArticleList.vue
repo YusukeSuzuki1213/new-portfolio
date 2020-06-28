@@ -43,13 +43,13 @@ export default {
     },
     iconSize: {
       type: String,
-      default: "lg"
+      default: "2x"
     }
   },
   data: () => ({
     buttonSize: {
-      width: "30",
-      height: "30"
+      width: "45",
+      height: "45"
     }
   }),
   methods: {
@@ -76,6 +76,9 @@ export default {
   padding: 0 15px 100px 15px;
   max-width: 1000px;
   margin: 0 auto;
+  @include sp() {
+    padding: 0 15px 50px 15px;
+  }
   &__link {
     position: absolute;
     top: 0;
@@ -110,6 +113,7 @@ export default {
       .article-title {
         font-size: 2.0em;
         margin: 10px 0;
+        font-weight: bold;
         &--blue {
           @include sp() {
             color: #0066cb;

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar class="header" app color="black" dark flat>
+  <div class="header">
     <div class="header__title">
       <h1>Yusuke's portfolio</h1>
     </div>
@@ -13,7 +13,7 @@
         >{{ content.text }}</g-link>
       </nav>
     </div>
-  </v-app-bar>
+  </div>
 </template>
 
 <script>
@@ -43,14 +43,21 @@ export default {
 
 <style scoped lang="scss">
 .header {
+  width: 100%;
+  height: 56px;
+  position: sticky;
+  top: 0px;
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  background: black;
+  z-index: 9999;
   &__title {
-    margin-right: auto;
-    @include sp() {
-      width: 100px;
-    }
+    color: white;
+    padding-left: 5px;
     h1 {
       margin-bottom: 0px; //vuetify 上書き
-      font-size: 20px;
+      font-size: 15px;
     }
   }
   &__contents {
@@ -58,12 +65,16 @@ export default {
   }
 }
 .nav {
+  padding-right: 20px;
+  @include sp() {
+    padding-right: 8px;
+  }
   &__link {
     margin: 0 10px;
     color: white;
     @include sp() {
       font-size: 15px;
-      margin: 0 6px;
+      margin: 0 8px;
     }
   }
 }

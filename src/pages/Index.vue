@@ -3,7 +3,7 @@
     <div class="main-wrap">
       <div class="anim-wrap" id="wrap">
         <div class="anim-wrap__box" id="box">
-          <h2 class="anim-wrap__box__title" id="title">かれんビー 其ノ貳</h2>
+          <div class="anim-wrap__box__title" id="title">かれんビー 其ノ貳</div>
           <div class="anim-wrap__box__sentence">上の</div>
           <div class="anim-wrap__box__sentence">阿良々木火憐</div>
           <div class="anim-wrap__box__sentence">小学生の頃から、髪型はおおむね、ポニーテーイルで通している。</div>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+
 export default {
   metaInfo() {
     return {
@@ -52,19 +53,37 @@ export default {
     };
   },
   async mounted() {
-    await this.$delay(1500);
+
+    
+    this.removeSentence();
+
+    await this.$delay(1500);   
+
     this.changeColor();
     this.frameAnimation();
     this.charAnimation(this.charAnimationCore);
   },
   methods: {
+    /*
+      box外からはみ出ているsentenceは削除
+    */ 
+    removeSentence() {
+      const boxElement = document.getElementById("box");
+
+      Array.from(
+        document.getElementsByClassName("anim-wrap__box__sentence")
+      ).forEach(elem => {
+        if (boxElement.getBoundingClientRect().left > elem.getBoundingClientRect().left + 1) {
+          elem.remove();
+      }});
+    },
+
     changeColor() {
       const wrapElement = document.getElementById("wrap");
-      wrapElement.style.background = "#656490";      
-      
+      wrapElement.style.background = "#656490";
+
       const boxElement = document.getElementById("box");
-      boxElement.style.color = "#d5d6f0";
-      //boxElement.style.overflow = "visible";
+      boxElement.style.color = "#d5d6f0";      
 
       document.getElementById("title").style.visibility = "visible";
     },
@@ -118,10 +137,11 @@ export default {
 
       setTimeout(() => {
         /* 1文字に対してアニメーションをさせる */
-        const element = Array.from(
+        const charElement = Array.from(
           document.getElementsByClassName("anim-wrap__box__sentence--char")
         );
-        element.forEach((elem, index) => {
+
+        charElement.forEach((elem, index) => {
           animation(elem, index);
         });
       }, 400);
@@ -213,12 +233,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.anim-wrap {  
-  display: flex;
-  height: calc(100vh - 64px);
-  justify-content: center;
-  align-items: center;  
+.main-wrap{  
+  height: calc(100% - 56px);
   background: #fbf5f8;
+  overflow: hidden;
+}
+.anim-wrap {
+  display: flex;  
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   &__box {
     position: relative;
     width: 80%;
@@ -226,13 +250,7 @@ export default {
     color: #e89eb8;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    //overflow-x: hidden;
-    //overflow: hidden;
-    clip-path: inset( -100vw -100vw -100vw 0 );
-    //overflow-y: visible;
-    //padding: 60px 180px;
-    //margin: 60px 5px;
-    
+    clip-path: inset(-100vw -100vw -100vw 0);
     &__title {
       position: absolute;
       top: 50%;
@@ -243,23 +261,15 @@ export default {
       width: 100%;
       text-align: center;
       writing-mode: horizontal-tb;
-      font-size: 4rem;
-      letter-spacing: 4rem;
+      font-size: 3rem;
+      letter-spacing: 3rem;
       visibility: hidden;
     }
     &__sentence {
       font-size: 1.6rem;
       line-height: 2;
       margin-left: 20px;
-    }
-    /* &::after {
-      position: absolute;
-      bottom: 0;
-      content: " ";
-      background-color: red;
-      height: 30px;
-      width: 30px;
-    } */
+    }    
   }
 }
 </style>

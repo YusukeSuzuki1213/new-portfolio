@@ -1,9 +1,9 @@
 <template>
   <section class="page">
     <div class="page__title">
-      <h2 class="text-center font-weight-bold mb-3">Works</h2>
+      <h2 class="text-center">Works</h2>
     </div>
-    <div class="works-list">
+    <div class="page__works-list">
       <ArticleList :articles="workPosts" :isClicable="isClicable" :iconSize="iconSize" />
     </div>
   </section>
@@ -23,19 +23,23 @@ export default {
   },
   data: () => ({
     isClicable: false,
-    iconSize: "lg", // size: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons  
+    iconSize: "2x" // size: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
   })
 };
 </script>
 
 <style scoped lang="scss">
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__title {
-    margin: 70px 0;
-    text-decoration: underline
+    font-size: 2rem;
+    text-decoration: underline;
   }
-}
-.works-list {
-  font-size: 0.6em;
+  &__works-list {
+    margin: 50px 0;
+    font-size: 0.6em;
+  }
 }
 </style>

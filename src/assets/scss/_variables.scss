@@ -24,7 +24,6 @@ $pc-content-width: 750px;
   }
 }
 
-
 @mixin sp() {
   @media screen and (max-width: $pc-content-width) {
     @content;

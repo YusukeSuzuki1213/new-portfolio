@@ -3,11 +3,14 @@
     <div class="component__title">
       <h2 class="text-center font-weight-bold mb-3">Skills</h2>
     </div>
-    <v-container>
-      <ul>
-        <li v-for="(skill, index) in skills" :key="index">{{ skill.name }}</li>
-      </ul>
-    </v-container>
+
+    <table class="component__table">
+      <tbody>
+        <tr v-for="(skills, index_c) in contents" :key="index_c">
+          <td v-for="(skill, index_s) in skills" :key="index_s">{{ skill.name }}</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </template>
 
@@ -16,25 +19,32 @@ export default {
   name: "Skills",
   data() {
     return {
-      skills: [
-        { name: "C" },
-        { name: "Emacs Lisp" },
-        { name: "Java" },
-        { name: "PHP" },
-        { name: "Ruby" },
-        { name: "Python" },
-        { name: "HTML/CSS" },
-        { name: "JavaScript" },
-        { name: "Kotlin" },
-        { name: "PyTorch" },
-        { name: "Kivy" },
-        { name: "Vue.js" },
-        { name: "Ruby on Rails" },
-        { name: "Git" },
-        { name: "Docker" },
-        { name: "Github Actions" },
-        { name: "Firebase" },
-        { name: "Android" }
+      contents: [
+        [
+          { name: "C" },          
+          { name: "Java" },
+          { name: "PHP" },
+          { name: "Ruby" },
+        ],
+        [          
+          { name: "Python" },
+          { name: "HTML/CSS" },
+          { name: "JavaScript" },
+          { name: "Kotlin" },
+        ],
+        [          
+          { name: "PyTorch" },
+          { name: "Kivy" },
+          { name: "Vue.js" },
+          { name: "React"},
+        ],
+        [
+          { name: "Rails" },
+          { name: "Git" },
+          { name: "Docker" },          
+          { name: "Firebase" }, 
+        ],
+        [{ name: "Android" }]
       ]
     };
   }
@@ -43,15 +53,24 @@ export default {
 
 <style scoped lang="scss">
 .component {
+  display: flex;  
+  flex-direction: column;
+  align-items: center;    
   &__title {
-    margin: 70px 0;
+    font-size: 2rem;
     text-decoration: underline;
   }
-}
-ul {
-  margin: 0 auto;
-  max-width: 800px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  &__table {
+    margin-top: 20px;
+    text-align: left;
+    td {
+      padding-left: 120px;      
+      padding-top: 3px;
+      @include sp() {
+        padding-left:18px;
+        padding-top: 8px;
+      }
+    }
+  }
 }
 </style>
