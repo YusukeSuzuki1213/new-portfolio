@@ -34,6 +34,7 @@ html, body{
   font: inherit;
   vertical-align: baseline;
   height: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 #app {
   height: 100%;

@@ -127,7 +127,6 @@ workflowはGithubのレポジトリ内.github/workflowsディレクトリ内にy
 作成したworkflowは以下のようになります。
 
 ```yaml
-
 name: pull request workflow
 
 on: pull_request
@@ -163,7 +162,6 @@ jobs:
             --app app/build/outputs/apk/debug/app-debug.apk \
             --device model=sailfish,version=25,locale=ja,orientation=portrait \
             --device model=zeroflte,version=22,locale=ja,orientation=portrait
-
 ```
 
 順番にみていきます。
