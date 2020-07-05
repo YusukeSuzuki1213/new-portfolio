@@ -30,7 +30,6 @@
 </template>
 
 <script>
-
 export default {
   metaInfo() {
     return {
@@ -53,11 +52,9 @@ export default {
     };
   },
   async mounted() {
-
-    
     this.removeSentence();
 
-    await this.$delay(1500);   
+    await this.$delay(1500);
 
     this.changeColor();
     this.frameAnimation();
@@ -66,16 +63,20 @@ export default {
   methods: {
     /*
       box外からはみ出ているsentenceは削除
-    */ 
+    */
     removeSentence() {
       const boxElement = document.getElementById("box");
 
       Array.from(
         document.getElementsByClassName("anim-wrap__box__sentence")
       ).forEach(elem => {
-        if (boxElement.getBoundingClientRect().left > elem.getBoundingClientRect().left + 1) {
+        if (
+          boxElement.getBoundingClientRect().left >
+          elem.getBoundingClientRect().left + 3
+        ) {
           elem.remove();
-      }});
+        }
+      });
     },
 
     changeColor() {
@@ -83,7 +84,7 @@ export default {
       wrapElement.style.background = "#656490";
 
       const boxElement = document.getElementById("box");
-      boxElement.style.color = "#d5d6f0";      
+      boxElement.style.color = "#d5d6f0";
 
       document.getElementById("title").style.visibility = "visible";
     },
@@ -128,9 +129,7 @@ export default {
         elem.innerHTML = Array.from(elem.textContent)
           .map(
             char =>
-              '<span class="anim-wrap__box__sentence--char" style="display: inline-block">' +
-              char +
-              "</span>"
+              `<span class="anim-wrap__box__sentence--char" style="display: inline-block">${char}</span>`
           )
           .join("");
       });
@@ -233,24 +232,29 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.main-wrap{  
+.main-wrap {
   height: calc(100% - 56px);
   background: #fbf5f8;
   overflow: hidden;
 }
 .anim-wrap {
-  display: flex;  
+  display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
   &__box {
+    font-family: 'Noto Serif JP', serif;
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     color: #e89eb8;
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     clip-path: inset(-100vw -100vw -100vw 0);
+    @include sp() {
+      width: 90%;
+      height: 90%;
+    }
     &__title {
       position: absolute;
       top: 50%;
@@ -264,12 +268,26 @@ export default {
       font-size: 3rem;
       letter-spacing: 3rem;
       visibility: hidden;
+      font-weight: 600;
+      @include tablet() {
+        font-size: 1.7rem;
+        letter-spacing: 2rem;
+      }
+      @include sp() {
+        font-size: 0.8rem;
+        letter-spacing: 0.8rem;
+      }
     }
     &__sentence {
-      font-size: 1.6rem;
+      font-weight: 200;
+      font-size: 1.4rem;
       line-height: 2;
       margin-left: 20px;
-    }    
+      @include sp() {
+        font-size: 0.7rem;
+        margin-left: 1rem;
+      }
+    }
   }
 }
 </style>

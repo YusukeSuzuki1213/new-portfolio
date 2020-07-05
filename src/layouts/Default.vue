@@ -23,14 +23,13 @@ query {
 </static-query>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Poppins:400, 600');
 
 html, body{
   line-height: 1.45;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 20px;
+  font-size: 20px;  
   font: inherit;
   vertical-align: baseline;
   height: 100%;

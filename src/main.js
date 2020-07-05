@@ -25,4 +25,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
       }
     }
   })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;900&display=swap'
+  })
 }
