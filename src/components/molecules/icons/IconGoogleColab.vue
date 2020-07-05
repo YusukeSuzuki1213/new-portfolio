@@ -1,11 +1,11 @@
 <template>
   <svg
-    width = "24"
-    height="24"
+    width = "32"
+    height="32"
     viewBox="0 0 24 24"
     preserveAspectRatio="xMidYMid meet"
     focusable="false"
-    style="pointer-events: none; display: block; width: 100%; height: 100%;"
+    style="pointer-events: none; display: block; margin: 0 auto"
   >
     <g>
       <path

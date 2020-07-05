@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-list">
+  <div class="icon-list" :style="{left: `${-10}px`}">
     <div v-for="(content, index) in contents" :key="index">
       <button
         class="icon-list__button"
@@ -62,16 +62,17 @@ export default {
 
 <style scoped lang="scss">
 .icon-list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;  
   &__button {    
-    border-radius: 50%;
-    margin-right: 10px;
+    border-radius: 50%;    
     border: none;
     outline: none;
     opacity: 0.6;
     background: rgba(255, 255, 255, 0);
+    padding: 0px;
     &:hover {
       cursor: pointer;
       background: whitesmoke;
