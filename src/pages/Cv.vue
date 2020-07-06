@@ -39,6 +39,8 @@ export default {
 
 <style scoped lang="scss">
 .cv {
+  position: relative;
+  top: 50px;
   font-size: 1rem;
   &__about {
     margin: 50px 10px;    

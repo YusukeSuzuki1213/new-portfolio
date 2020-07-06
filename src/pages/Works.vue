@@ -64,6 +64,8 @@ export default {
 
 <style scoped lang="scss">
 .wrap {
+  position: relative;
+  top: 50px;
   &__works {
     margin: 50px 5px 0px 5px;
   }

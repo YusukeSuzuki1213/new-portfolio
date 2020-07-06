@@ -4,25 +4,9 @@
       <div class="anim-wrap" id="wrap">
         <div class="anim-wrap__box" id="box">
           <div class="anim-wrap__box__title" id="title">かれんビー 其ノ貳</div>
-          <div class="anim-wrap__box__sentence">上の</div>
-          <div class="anim-wrap__box__sentence">阿良々木火憐</div>
-          <div class="anim-wrap__box__sentence">小学生の頃から、髪型はおおむね、ポニーテーイルで通している。</div>
-          <div
-            class="anim-wrap__box__sentence"
-          >実を言うと一度だけ、確か中学校に入学したばかりのころだったか、彼女は髪を染めたことがあるらしい--なんかのアニメのキャラみたいな、とでもひょうげんすべきなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上げたらしいのだ。どういうつもりだったのかは未だに不明だが、まあ当然の帰結として、母親に顔面をぶん殴られて(母の名誉のために言っておくが、温厚な母が娘に手を上げたのは、それが今のところ最初で最後である)、その日の夜には黒に戻された(しかも墨汁で)。</div>
-          <div
-            class="anim-wrap__box__sentence"
-          >しかし、そんな度を外した中学デビューを果たそうとしたカレンが、果たしてどのような性格をしているかは、これ以上語るまでもないのだろう。</div>
-          <div class="anim-wrap__box__sentence">造形は、ありていに言って可愛くない。</div>
-          <div class="anim-wrap__box__sentence">むしろ格好いい。</div>
-          <div class="anim-wrap__box__sentence">なまじ火憐は格闘技に手を出しているので、すごく姿勢がいいのだった。</div>
-          <div class="anim-wrap__box__sentence">なまじ火sに中学デビューを果るので、のだった。</div>
-          <div class="anim-wrap__box__sentence">な手彼女は髪を染めたこで、すごく姿勢がいいのだったかりのころだったか、彼女は。</div>
-          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
-          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
-          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
-          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
-          <div class="anim-wrap__box__sentence">ね、ポニーテーイルでいいのだった。きなのだろうか、とにかく目もくらむようなショッキングピンクの髪色に仕上</div>
+          <div class="anim-wrap__box__sentence">　桜の花が咲くと人々は酒をぶらさげたり団子だんごをたべて花の下を歩いて絶景だの春ランマンだのと浮かれて陽気になりますが、これは嘘です。なぜ嘘かと申しますと、桜の花の下へ人がより集って酔っ払ってゲロを吐いて喧嘩けんかして、これは江戸時代からの話で、大昔は桜の花の下は怖しいと思っても、絶景だなどとは誰も思いませんでした。近頃は桜の花の下といえば人間がより集って酒をのんで喧嘩していますから陽気でにぎやかだと思いこんでいますが、桜の花の下から人間を取り去ると怖ろしい景色になりますので、能にも、さる母親が愛児を人さらいにさらわれて子供を探して発狂して桜の花の満開の林の下へ来かかり見渡す花びらの陰に子供の幻を描いて狂い死して花びらに埋まってしまう（このところ小生の蛇足だそく）という話もあり、桜の林の花の下に人の姿がなければ怖しいばかりです。</div>
+          <div class="anim-wrap__box__sentence">　昔、鈴鹿峠にも旅人が桜の森の花の下を通らなければならないような道になっていました。花の咲かない頃はよろしいのですが、花の季節になると、旅人はみんな森の花の下で気が変になりました。できるだけ早く花の下から逃げようと思って、青い木や枯れ木のある方へ一目散に走りだしたものです。一人だとまだよいので、なぜかというと、花の下を一目散に逃げて、あたりまえの木の下へくるとホッとしてヤレヤレと思って、すむからですが、二人連は都合が悪い。なぜなら人間の足の早さは各人各様で、一人が遅れますから、オイ待ってくれ、後から必死に叫んでも、みんな気違いで、友達をすてて走ります。それで鈴鹿峠の桜の森の花の下を通過したとたんに今迄仲のよかった旅人が仲が悪くなり、相手の友情を信用しなくなります。そんなことから旅人も自然に桜の森の下を通らないで、わざわざ遠まわりの別の山道を歩くようになり、やがて桜の森は街道を外はずれて人の子一人通らない山の静寂へとり残されてしまいました。</div>
+          <div class="anim-wrap__box__sentence">　そうなって何年かあとに、この山に一人の山賊が住みはじめましたが、この山賊はずいぶんむごたらしい男で、街道へでて情容赦なく着物をはぎ人の命も断ちましたが、こんな男でも桜の森の花の下へくるとやっぱり怖しくなって気が変になりました。そこで山賊はそれ以来花がきらいで、花というものは怖しいものだな、なんだか厭なものだ、そういう風に腹の中では呟つぶやいていました。花の下では風がないのにゴウゴウ風が鳴っているような気がしました。そのくせ風がちっともなく、一つも物音がありません。自分の姿と跫音あしおとばかりで、それがひっそり冷めたいそして動かない風の中につつまれていました。花びらがぽそぽそ散るように魂が散っていのちがだんだん衰えて行くように思われます。それで目をつぶって何か叫んで逃げたくなりますが、目をつぶると桜の木にぶつかるので目をつぶるわけにも行きませんから、一そう気違いになるのでした。</div>
         </div>
       </div>
     </div>
@@ -72,7 +56,7 @@ export default {
       ).forEach(elem => {
         if (
           boxElement.getBoundingClientRect().left >
-          elem.getBoundingClientRect().left + 3
+          elem.getBoundingClientRect().left + 4
         ) {
           elem.remove();
         }
@@ -143,7 +127,7 @@ export default {
         charElement.forEach((elem, index) => {
           animation(elem, index);
         });
-      }, 400);
+      }, 300);
     },
 
     charAnimationCore(elem, index) {
@@ -233,6 +217,8 @@ export default {
 
 <style scoped lang="scss">
 .main-wrap {
+  position: relative;
+  top: 56px;
   height: calc(100% - 56px);
   background: #fbf5f8;
   overflow: hidden;
@@ -270,22 +256,22 @@ export default {
       visibility: hidden;
       font-weight: 600;
       @include tablet() {
-        font-size: 1.7rem;
+        font-size: 2.2rem;
         letter-spacing: 2rem;
       }
       @include sp() {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         letter-spacing: 0.8rem;
       }
     }
     &__sentence {
       font-weight: 200;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       line-height: 2;
-      margin-left: 20px;
+      margin-left: 1rem;
       @include sp() {
-        font-size: 0.7rem;
-        margin-left: 1rem;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
       }
     }
   }

@@ -67,7 +67,7 @@ export default {
       padding-left: 120px;      
       padding-top: 3px;
       @include sp() {
-        padding-left:18px;
+        padding-left:11px;
         padding-top: 8px;
       }
     }

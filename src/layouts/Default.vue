@@ -29,8 +29,8 @@ html, body{
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 20px;  
-  font: inherit;
+  font-size: 17px;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;  
   vertical-align: baseline;
   height: 100%;
   -webkit-text-size-adjust: 100%;

@@ -11,8 +11,7 @@
         <div class="post-title">
           <h1 class="post-title__text">{{ $page.blogPost.title }}</h1>
         </div>
-        <div class="post">
-          <div class="post__header"></div>
+        <div class="post">          
           <div class="post__content" v-html="$page.blogPost.content"></div>
           <div class="post__footer"></div>
         </div>
@@ -67,8 +66,9 @@ export default {
   font-size: 1rem;
 }
 .post-title {
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-top: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
   &__text {
     border-bottom: 0px;
@@ -126,6 +126,7 @@ export default {
       padding-bottom: 0px;
     }
     p {
+      color: rgba(0,0,0,.8);
       margin-bottom: 30px;
       line-height: 2;
     }
