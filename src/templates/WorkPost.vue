@@ -1,5 +1,3 @@
 <template>
-<Layout>
-</Layout>
-
+<Layout></Layout>
 </template>

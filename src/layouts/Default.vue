@@ -1,11 +1,7 @@
 <template>
   <div>
-    <v-app>
-      <v-content>
-        <Header />
-        <slot />
-      </v-content>
-    </v-app>
+    <Header/>
+    <slot />      
   </div>
 </template>
 
@@ -27,30 +23,19 @@ query {
 </static-query>
 
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-  overflow: hidden;
-}
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+html, body{
+  line-height: 1.45;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 17px;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;  
+  vertical-align: baseline;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-/* 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+#app {
+  height: 100%;
 }
-
-.nav__link {
-  margin-left: 20px;
-}  */
 </style>

@@ -16,7 +16,7 @@ tags:
 本記事ではGithub Actionsを使用して、Firebase Test Labで実機テストを行う方法を紹介します。
 具体的には、プルリクエストをトリガーにGithub Actionsのworkflowが起動し、Firebase Test Lab上でRoboテストを、自動で走らせる方法を紹介します。
 
-## きっかけ
+# きっかけ
 これを試したきっかけは、仕事先でライブラリのアップデートをした際に、クラッシュ等がないかの確認のため、実機をポチポチするという作業がとても面倒に感じられ、Firebase Test Labで自動化できるのではないかと考えたことです。
 さらにその調査がプルリクをトリガーに走ってくれたら素敵だと思いGithub Actionsを用いました。
 
@@ -127,7 +127,6 @@ workflowはGithubのレポジトリ内.github/workflowsディレクトリ内にy
 作成したworkflowは以下のようになります。
 
 ```yaml
-
 name: pull request workflow
 
 on: pull_request
@@ -163,7 +162,6 @@ jobs:
             --app app/build/outputs/apk/debug/app-debug.apk \
             --device model=sailfish,version=25,locale=ja,orientation=portrait \
             --device model=zeroflte,version=22,locale=ja,orientation=portrait
-
 ```
 
 順番にみていきます。

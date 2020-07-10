@@ -1,9 +1,9 @@
 <template>
   <Layout>
     <div class="cv">
-      <About />      
-      <Skills />
-      <Contacts />
+      <About class="cv__about"/>
+      <Skills class="cv__skills"/>
+      <Contacts class="cv__contacts"/>
     </div>
   </Layout>
 </template>
@@ -37,8 +37,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .cv {
-  font-size: 0.9em;
+  position: relative;
+  top: 50px;
+  font-size: 1rem;
+  &__about {
+    margin: 50px 10px;    
+  }
+  &__skills {
+    margin: 50px 10px;    
+  }
+  &__contacts {
+    margin: 50px 10px;    
+  }
 }
 </style>

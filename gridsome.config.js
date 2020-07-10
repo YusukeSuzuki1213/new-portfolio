@@ -58,6 +58,6 @@ module.exports = {
   },
   chainWebpack(config) {
     config.resolve.alias.set(`@upload-images`, `@/../uploads/images`)
-    config.resolve.alias.set(`@assets-images`, `@/../src/assets/images`)    
+    config.resolve.alias.set(`@assets-images`, `@/../src/assets/images`)
   },
 }

@@ -3,7 +3,7 @@
     <div class="component__title">
       <h2 class="text-center font-weight-bold mb-3">Contacts</h2>
     </div>
-    <IconList :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize" :parentName="'Contacts'"/>
+    <IconList class="component__icons" :contents="contents" :buttonSize="buttonSize" :iconSize="iconSize" :parentName="'Contacts'"/>
   </section>
 </template>
 
@@ -49,7 +49,7 @@ export default {
         icon: {
           useFontAwesome: false,
           prefix: "",
-          name: "$vuetify.icons.iconQiita"
+          name: "Qiita"
         },
         size: "55",
         url: "https://qiita.com/YusukeSuzuki1213"
@@ -86,9 +86,15 @@ export default {
 
 <style scoped lang="scss">
 .component {
+  display: flex;  
+  flex-direction: column;
+  align-items: center;    
   &__title {
-    margin: 70px 0 30px 0;
+    font-size: 2rem;    
     text-decoration: underline
+  }
+  &__icons {
+    margin-top: 20px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <Layout>
-    <div class="posts">
-      <Posts :posts="$page.posts.edges"/>
+    <div class="wrap">
+      <Posts class="wrap__posts" :posts="$page.posts.edges"/>
     </div>
   </Layout>
 </template>
@@ -52,6 +52,12 @@ export default {
   }
 };
 </script>
-<style scoped>
-
+<style scoped lang="scss">
+.wrap {
+  position: relative;
+  top: 50px;
+  &__posts {
+    margin: 50px 5px 0px 5px;
+  }
+}
 </style>

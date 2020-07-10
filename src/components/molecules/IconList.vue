@@ -1,27 +1,29 @@
 <template>
-  <div class="icon-list">
+  <div class="icon-list" :style="{left: `${-10}px`}">
     <div v-for="(content, index) in contents" :key="index">
-      <v-btn
-        @click="sendGa(parentName, content.name, content.url)"        
-        :href="content.url"
-        target="_blank"
-        icon
-        :height="buttonSize.height"
-        :width="buttonSize.width"
+      <button
+        class="icon-list__button"
+        @click="openPage(content.url), sendGa(parentName, content.name, content.url)"
+        :style="{width: `${buttonSize.width}px`, height: `${buttonSize.height}px`}"        
       >
-        <font-awesome
-          v-if="content.icon.useFontAwesome"
+        <font-awesome  
+          v-if="content.icon.useFontAwesome"          
           :icon="[content.icon.prefix, content.icon.name]"
           :size="iconSize"
         />
-        <v-icon v-else :size="content.size">{{ content.icon.name }}</v-icon>
-      </v-btn>
+        <IconGoogleColab v-else-if="content.icon.name === 'GoogleColab'"/>
+        <!-- TODO: アイコンの大きさ調整する必要<IconQiita v-else-if="content.icon.name === 'Qiita'" :size="content.size" />         -->
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+     IconGoogleColab: () => import('~/components/molecules/icons/IconGoogleColab'),
+     IconQiita: () => import('~/components/molecules/icons/IconQiita'),
+  },
   props: {
     contents: {
       type: Array,
@@ -44,6 +46,9 @@ export default {
     }
   },
   methods: {
+    async openPage(url) {
+        window.open(url, '_blank');
+    },
     async sendGa(category, action, label = "none") {
       this.$ga.event({
         eventCategory: category, // work or contact
@@ -55,10 +60,23 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .icon-list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;  
+  &__button {    
+    border-radius: 50%;    
+    border: none;
+    outline: none;
+    opacity: 0.6;
+    background: rgba(255, 255, 255, 0);
+    padding: 0px;
+    &:hover {
+      cursor: pointer;
+      background: whitesmoke;
+    }
+  }
 }
 </style>>

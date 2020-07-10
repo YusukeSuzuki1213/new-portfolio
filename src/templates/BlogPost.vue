@@ -2,14 +2,16 @@
   <Layout>
     <article class="article-wrap">
       <header class="header">
-        <g-image @click="e" class="header__img" :src="require(`!!assets-loader!@upload-images/${ $page.blogPost.thumbnail }`)" />
+        <g-image
+          class="header__img"
+          :src="require(`!!assets-loader!@upload-images/${ $page.blogPost.thumbnail }`)"
+        />
       </header>
       <main class="main">
         <div class="post-title">
           <h1 class="post-title__text">{{ $page.blogPost.title }}</h1>
         </div>
-        <div class="post">
-          <div class="post__header"></div>
+        <div class="post">          
           <div class="post__content" v-html="$page.blogPost.content"></div>
           <div class="post__footer"></div>
         </div>
@@ -34,25 +36,23 @@ query BlogPost ($id: ID!) {
 
 <script>
 export default {
-  methods: {
-    e(){
-      console.log(require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`)).src
-    }
-  },
   metaInfo() {
     return {
       meta: [
-        { name: 'twitter:card', content: "summary" },
+        { name: "twitter:card", content: "summary" },
         { name: "twitter:site", content: "@ss1ua2zt1us3uki" },
         {
           property: "og:url",
           content: "https://yusuke-suzuki.netlify.app" + this.$route.path
         },
-        { property: "og:title", content:this.$page.blogPost.title },
+        { property: "og:title", content: this.$page.blogPost.title },
         { property: "og:description", content: this.$page.blogPost.summary },
         {
           property: "og:image",
-          content:  "https://yusuke-suzuki.netlify.app" + require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`).src
+          content:
+            "https://yusuke-suzuki.netlify.app" +
+            require(`!!assets-loader!@upload-images/${this.$page.blogPost.thumbnail}`)
+              .src
         }
       ]
     };
@@ -63,14 +63,17 @@ export default {
 
 <style lang="scss">
 .article-wrap {
-  font-size: 0.8em;
+  font-size: 1rem;
 }
 .post-title {
-  margin-top: 60px;
-  margin-bottom: 0px;
+  margin-top: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
   &__text {
     border-bottom: 0px;
+    font-size: 2rem;
+    font-weight: bold;
   }
   @include sp() {
     padding: 20px;
@@ -80,7 +83,7 @@ export default {
   position: relative;
   width: 100%;
   background-color: #ccd7dd;
-  height: 500px;
+  height: 525px;
   overflow: hidden;
   @include tablet() {
     height: 0px;
@@ -99,21 +102,41 @@ export default {
 }
 .main {
   .post {
-    h1 {
-      margin-top: 60px;
-      border-bottom: 1px solid #ddd;
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-size: 1.7rem;
+      font-weight: bold;
+      line-height: 1.15;
       padding-bottom: 0.3em;
+      border-bottom: 1px solid #ddd;
+      margin: 4rem 0 1rem 0;
+      padding-bottom: 7px;
     }
     h2 {
-      border-bottom: 1px solid #ddd;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    h4 {
+      font-size: 1.1rem;
+      border-bottom: none;
+      padding-bottom: 0px;
     }
     p {
+      color: rgba(0,0,0,.8);
+      margin-bottom: 30px;
       line-height: 2;
     }
     ul,
     ol {
       padding-left: 34px;
       margin-bottom: 1.25em;
+    }
+    ul {
+      list-style: disc;
     }
     blockquote {
       margin-left: 8px;
@@ -134,6 +157,15 @@ export default {
       @include sp() {
         width: 95%;
       }
+    }
+    small {
+      font-size: 0.889em;
+    }
+    strong {
+      font-weight: 600;
+    }
+    em {
+      font-style: italic;
     }
   }
 }
