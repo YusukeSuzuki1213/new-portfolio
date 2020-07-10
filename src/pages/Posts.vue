@@ -54,6 +54,8 @@ export default {
 </script>
 <style scoped lang="scss">
 .wrap {
+  position: relative;
+  top: 50px;
   &__posts {
     margin: 50px 5px 0px 5px;
   }
