@@ -3,7 +3,7 @@
     <div class="main-wrap">
       <div class="anim-wrap" id="wrap">
         <div class="anim-wrap__box" id="box">
-          <div class="anim-wrap__box__title" id="title">題目未定 其ノ貳</div>
+          <div class="anim-wrap__box__title" id="title">㐧弐章 餘祿篇</div>
           <div class="anim-wrap__box__sentences" id="sentences" v-html="charSpan"></div>
         </div>
       </div>
