@@ -11,4 +11,11 @@ links:
       name: github
     size: "20"
     url: https://github.com/YusukeSuzuki1213/monogatari-effect
+  - name: "youtube"
+    icon: 
+      useFontAwesome: true
+      prefix: "fab"
+      name: "youtube"
+    size: "20"
+    url: "https://youtu.be/ZcojaVmAoNA"
 ---
