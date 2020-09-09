@@ -152,7 +152,9 @@ export default {
     }
     img {
       display: block;
-      width: 70%;
+      width: 100%; 
+      height: 100%;
+      max-width:550px;
       margin: 15px auto 30px auto;
       @include sp() {
         width: 95%;
