@@ -39,7 +39,7 @@ fun createChannel(context: Context) {
     )
 }
 ```
-`NotificationManagerCompat.from(context).createNotificationChannels`において、アプリの通知チャンネルを作成しています。引数には`List<NotificationChannel>`型のインスタンスを指定しています。
+`createNotificationChannels`において、アプリの通知チャンネルを作成しています。引数には`List<NotificationChannel>`型のインスタンスを指定しています。
 
 [NotificationChannel](https://developer.android.com/reference/android/app/NotificationChannel)クラスはチャンネルの設定についてのクラスで、インスタンス化には、チャンネルのId、チャンネルの名前、Importanceを指定しています。Importanceとは、通知受信時に音を出すか、ヘッドアップ通知とするかなどの通知の重要度を指定することができます。詳しくは[Notification importance](https://developer.android.com/guide/topics/ui/notifiers/notifications#importance)を参考にしてください。
 
