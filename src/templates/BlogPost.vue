@@ -134,6 +134,14 @@ export default {
     ol {
       padding-left: 34px;
       margin-bottom: 1.25em;
+      @include sp() {
+        padding-left: 20px;
+      }
+    }
+    li {
+      p {
+        margin: 0;
+      }
     }
     ul {
       list-style: disc;
