@@ -19,7 +19,7 @@
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-remark-youtube": "^1.0.1",
     "netlify-cms": "^2.10.49",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.2",
     "webpack-node-externals": "^1.7.2"
   }
